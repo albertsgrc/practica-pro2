@@ -1,0 +1,625 @@
+\hypertarget{class_organismo}{\section{Referencia de la Clase Organismo}
+\label{class_organismo}\index{Organismo@{Organismo}}
+}
+
+
+Representa un organismo del experimento. Se caracteriza por tener un identificador que lo identifica unívocamente y un árbol que representa su morfología, además de un parámetro que almacena el id de la célula con identificador máximo y un parámetro que indica si el organismo ha sufrido un recorte.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_organismo_aa5dbeed205b53c0e555ef2a6456da144}{Organismo} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un \hyperlink{class_organismo}{Organismo}. \end{DoxyCompactList}\item 
+void \hyperlink{class_organismo_a3a4ab01f4ad3cdc1d12361a7a3965009}{reproducir\-\_\-pareja} (\hyperlink{class_organismo}{Organismo} \&escogido, \hyperlink{class_organismo}{Organismo} \&hijo, bool \&compatibles)
+\begin{DoxyCompactList}\small\item\em Operación de reproducción entre organismos. \end{DoxyCompactList}\item 
+\hyperlink{class_organismo_ad1ba743e609a358f1479ebf341220747}{$\sim$\-Organismo} ()
+\begin{DoxyCompactList}\small\item\em Destructora por defecto. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organismo_a0016a9b39db1bc624cc7db6f710675ad}{esta\-\_\-muerto} () const 
+\begin{DoxyCompactList}\small\item\em Consultora del estado vital del organismo. \end{DoxyCompactList}\item 
+void \hyperlink{class_organismo_a108a8201261bf905b3c11c705d9560c6}{escribir\-\_\-organismo} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura de un organismo. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organismo_a26bac74d7e45a0abe5d3fed49dcd1ced}{esta\-\_\-recortado} () const 
+\begin{DoxyCompactList}\small\item\em Consultora que indica si el organismo ha sufrido un recorte. \end{DoxyCompactList}\item 
+void \hyperlink{class_organismo_a1747e3ba83922add7df6e0ca6b2c9238}{aplicar\-\_\-recorte} ()
+\begin{DoxyCompactList}\small\item\em Operación de recorte de un organismo. \end{DoxyCompactList}\item 
+void \hyperlink{class_organismo_a0b7d59aa0b19bf00d876a3050d3e9ab6}{aplicar\-\_\-estiron} ()
+\begin{DoxyCompactList}\small\item\em Operación de estiramiento de un organismo. \end{DoxyCompactList}\item 
+void \hyperlink{class_organismo_ad94b97b3d085ba9af2df3fb851cb6378}{leer\-\_\-organismo} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura de un organismo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipos privados}
+\begin{DoxyCompactItemize}
+\item 
+typedef Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel}
+\begin{DoxyCompactList}\small\item\em Contiene en todo momento el id de la célula con id de máximo valor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_organismo_a652f037263a8b6e429dfc50134860a35}{leer\-\_\-arbcelula} (\hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&a, int \&\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax})
+\item 
+static void \hyperlink{class_organismo_a5a465f8d1bbdc11182102fa96eb1202e}{escribir\-\_\-arbcelula} (\hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&a)
+\item 
+static void \hyperlink{class_organismo_a5b15ef34617e0c3642b04b518be27962}{recortar\-\_\-arbcelula} (\hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&a, int \&\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax})
+\item 
+static void \hyperlink{class_organismo_af2228bd5b25c4ca5924d30f075cb13fc}{estirar\-\_\-arbcelula} (\hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&a, int \&\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax})
+\item 
+static void \hyperlink{class_organismo_a65395a14684f31fa2dadba6a3e037ad5}{crear\-\_\-hijo} (\hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&x1, \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&x2, \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&h, int \&idmaxx1, int \&idmaxh, int \&tamint, int \&tamx1, int \&tamx2)
+\item 
+static void \hyperlink{class_organismo_ae702339f0378d08af4f30729a4f2307c}{colocar\-\_\-clones\-\_\-x1} (\hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&a, \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&h, int \&tam, int \&idmaxh)
+\item 
+static void \hyperlink{class_organismo_a2614d55b5ce001c216fc24c2eed9bfef}{colocar\-\_\-clones\-\_\-x2} (\hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&a, \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} \&h, int \&tam, int \&idmaxh, int \&idmaxx1)
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}
+\item 
+bool \hyperlink{class_organismo_ab191bedf8c3fb1e6e21e0d69dd35437f}{recortado}
+\begin{DoxyCompactList}\small\item\em Representa la morfología del organismo, es decir, las células que lo conforman y las relaciones existentes entre ellas. \end{DoxyCompactList}\item 
+int \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax}
+\begin{DoxyCompactList}\small\item\em Indica si el organismo ha sufrido un recorte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un organismo del experimento. Se caracteriza por tener un identificador que lo identifica unívocamente y un árbol que representa su morfología, además de un parámetro que almacena el id de la célula con identificador máximo y un parámetro que indica si el organismo ha sufrido un recorte. 
+
+Definición en la línea 20 del archivo Organismo.\-hpp.
+
+
+
+\subsection{Documentación de los 'Typedef' miembros de la clase}
+\hypertarget{class_organismo_a6d28459b85f211994ba446ba304fa141}{\index{Organismo@{Organismo}!Arbcel@{Arbcel}}
+\index{Arbcel@{Arbcel}!Organismo@{Organismo}}
+\subsubsection[{Arbcel}]{\setlength{\rightskip}{0pt plus 5cm}typedef Arbre$<${\bf Celula}$>$ {\bf Organismo\-::\-Arbcel}\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organismo_a6d28459b85f211994ba446ba304fa141}
+
+
+Contiene en todo momento el id de la célula con id de máximo valor. 
+
+
+
+Definición en la línea 110 del archivo Organismo.\-hpp.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_organismo_aa5dbeed205b53c0e555ef2a6456da144}{\index{Organismo@{Organismo}!Organismo@{Organismo}}
+\index{Organismo@{Organismo}!Organismo@{Organismo}}
+\subsubsection[{Organismo}]{\setlength{\rightskip}{0pt plus 5cm}Organismo\-::\-Organismo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organismo_aa5dbeed205b53c0e555ef2a6456da144}
+
+
+Creadora por defecto. Se ejecuta automáticamente al declarar un \hyperlink{class_organismo}{Organismo}. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un organismo muerto, con id máxima 0 y no recortado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 149 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+149                      \{
+150     \hyperlink{class_organismo_ab191bedf8c3fb1e6e21e0d69dd35437f}{recortado} = \textcolor{keyword}{false};
+151     \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax} = 0;
+152 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_ad1ba743e609a358f1479ebf341220747}{\index{Organismo@{Organismo}!$\sim$\-Organismo@{$\sim$\-Organismo}}
+\index{$\sim$\-Organismo@{$\sim$\-Organismo}!Organismo@{Organismo}}
+\subsubsection[{$\sim$\-Organismo}]{\setlength{\rightskip}{0pt plus 5cm}Organismo\-::$\sim$\-Organismo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organismo_ad1ba743e609a358f1479ebf341220747}
+
+
+Destructora por defecto. 
+
+
+
+Definición en la línea 169 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+169 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_organismo_a3a4ab01f4ad3cdc1d12361a7a3965009}{\index{Organismo@{Organismo}!reproducir\-\_\-pareja@{reproducir\-\_\-pareja}}
+\index{reproducir\-\_\-pareja@{reproducir\-\_\-pareja}!Organismo@{Organismo}}
+\subsubsection[{reproducir\-\_\-pareja}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::reproducir\-\_\-pareja (
+\begin{DoxyParamCaption}
+\item[{{\bf Organismo} \&}]{escogido, }
+\item[{{\bf Organismo} \&}]{hijo, }
+\item[{bool \&}]{compatibles}
+\end{DoxyParamCaption}
+)}}\label{class_organismo_a3a4ab01f4ad3cdc1d12361a7a3965009}
+
+
+Operación de reproducción entre organismos. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt out}  & {\em hijo} & Parámetro de salida en el que se guardará el hijo resultante de la reproducción en caso de que ésta se produzca \\
+\hline
+\mbox{\tt in}  & {\em escogido} & Parámetro entrada que contiene el organismo escogido por el parámetro implícito para reproducirse \\
+\hline
+\mbox{\tt out}  & {\em compatibles} & Parámetro de salida que indica si el parámetro implícito es compatible con {\ttfamily escogido} (i.\-e la reproducción ha dado lugar a un hijo) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito y {\ttfamily escogido} son organismos vivos. {\ttfamily hijo} es un organismo muerto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito y {\ttfamily escogido} no se han modificado, {\ttfamily hijo} es el organismo resultante de la reproducción del parámetro implícito y {\ttfamily escogido} si {\ttfamily compatible} es {\itshape cierto}. Si {\ttfamily compatible} es {\itshape falso} {\ttfamily hijo} no se ha modificado. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 155 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+155                                                                                        \{
+156     \textcolor{keywordtype}{int} auxidmax = \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax};
+157     \textcolor{keywordtype}{int} tamx1, tamx2, tamint;
+158     tamx1 = tamx2 = tamint = 0;
+159     \hyperlink{class_organismo_a65395a14684f31fa2dadba6a3e037ad5}{crear\_hijo}(\hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}, escogido.\hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}, hijo.
+      \hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}, auxidmax, hijo.\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax}, tamint, tamx1, tamx2);
+160     compatibles = tamint >= (tamx1 + tamx2)/4;
+161     \textcolor{keywordflow}{if} (not compatibles) \{
+162         hijo.\hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}.a\_buit();
+163         hijo.\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax} = 0;
+164     \}
+165 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a0016a9b39db1bc624cc7db6f710675ad}{\index{Organismo@{Organismo}!esta\-\_\-muerto@{esta\-\_\-muerto}}
+\index{esta\-\_\-muerto@{esta\-\_\-muerto}!Organismo@{Organismo}}
+\subsubsection[{esta\-\_\-muerto}]{\setlength{\rightskip}{0pt plus 5cm}bool Organismo\-::esta\-\_\-muerto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organismo_a0016a9b39db1bc624cc7db6f710675ad}
+
+
+Consultora del estado vital del organismo. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si el parámetro implícito está muerto 
+\end{DoxyPostcond}
+
+
+Definición en la línea 173 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+173                                   \{
+174     \textcolor{keywordflow}{return} \hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}.es\_buit();
+175 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a108a8201261bf905b3c11c705d9560c6}{\index{Organismo@{Organismo}!escribir\-\_\-organismo@{escribir\-\_\-organismo}}
+\index{escribir\-\_\-organismo@{escribir\-\_\-organismo}!Organismo@{Organismo}}
+\subsubsection[{escribir\-\_\-organismo}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::escribir\-\_\-organismo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organismo_a108a8201261bf905b3c11c705d9560c6}
+
+
+Operación de escritura de un organismo. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito la morfología del parámetro implícito por el canal estándar de salida El parámetro implícito no se ha modificado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 177 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+177                                    \{
+178     \hyperlink{class_organismo_a5a465f8d1bbdc11182102fa96eb1202e}{escribir\_arbcelula}(\hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia});
+179     cout << endl;
+180 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a26bac74d7e45a0abe5d3fed49dcd1ced}{\index{Organismo@{Organismo}!esta\-\_\-recortado@{esta\-\_\-recortado}}
+\index{esta\-\_\-recortado@{esta\-\_\-recortado}!Organismo@{Organismo}}
+\subsubsection[{esta\-\_\-recortado}]{\setlength{\rightskip}{0pt plus 5cm}bool Organismo\-::esta\-\_\-recortado (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organismo_a26bac74d7e45a0abe5d3fed49dcd1ced}
+
+
+Consultora que indica si el organismo ha sufrido un recorte. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado indica si el parámetro implícito ha sido recortado alguna vez desde su creación 
+\end{DoxyPostcond}
+
+
+Definición en la línea 182 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+182                                      \{
+183     \textcolor{keywordflow}{return} \hyperlink{class_organismo_ab191bedf8c3fb1e6e21e0d69dd35437f}{recortado};
+184 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a1747e3ba83922add7df6e0ca6b2c9238}{\index{Organismo@{Organismo}!aplicar\-\_\-recorte@{aplicar\-\_\-recorte}}
+\index{aplicar\-\_\-recorte@{aplicar\-\_\-recorte}!Organismo@{Organismo}}
+\subsubsection[{aplicar\-\_\-recorte}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::aplicar\-\_\-recorte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organismo_a1747e3ba83922add7df6e0ca6b2c9238}
+
+
+Operación de recorte de un organismo. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito no está muerto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito ha sufrido un recorte, se ha marcado como recortado y su identificador máximo se ha actualizado consecuentemente 
+\end{DoxyPostcond}
+
+
+Definición en la línea 188 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+188                                 \{
+189     \hyperlink{class_organismo_ab191bedf8c3fb1e6e21e0d69dd35437f}{recortado} = \textcolor{keyword}{true};
+190     \textcolor{keywordtype}{int} auxidmax = 0; \textcolor{comment}{// Variable auxiliar en la que obtendremos el nuevo identificador máximo después de
+       recortar}
+191     \hyperlink{class_organismo_a5b15ef34617e0c3642b04b518be27962}{recortar\_arbcelula}(\hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}, auxidmax);
+192     \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax} = auxidmax; \textcolor{comment}{// Actualizamos idmax}
+193 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a0b7d59aa0b19bf00d876a3050d3e9ab6}{\index{Organismo@{Organismo}!aplicar\-\_\-estiron@{aplicar\-\_\-estiron}}
+\index{aplicar\-\_\-estiron@{aplicar\-\_\-estiron}!Organismo@{Organismo}}
+\subsubsection[{aplicar\-\_\-estiron}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::aplicar\-\_\-estiron (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organismo_a0b7d59aa0b19bf00d876a3050d3e9ab6}
+
+
+Operación de estiramiento de un organismo. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito no está muerto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito ha sufrido un estirón y su identificador máximo se ha actualizado consecuentemente 
+\end{DoxyPostcond}
+
+
+Definición en la línea 195 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+195                                 \{
+196     \hyperlink{class_organismo_af2228bd5b25c4ca5924d30f075cb13fc}{estirar\_arbcelula}(\hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+197 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_ad94b97b3d085ba9af2df3fb851cb6378}{\index{Organismo@{Organismo}!leer\-\_\-organismo@{leer\-\_\-organismo}}
+\index{leer\-\_\-organismo@{leer\-\_\-organismo}!Organismo@{Organismo}}
+\subsubsection[{leer\-\_\-organismo}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::leer\-\_\-organismo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organismo_ad94b97b3d085ba9af2df3fb851cb6378}
+
+
+Operación de lectura de un organismo. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro implícito es vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener una morfología leída del canal de entrada estándar y un identificador máximo que coincide con el identificador de célula máximo de la morfología 
+\end{DoxyPostcond}
+
+
+Definición en la línea 199 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+199                                \{
+200     \hyperlink{class_organismo_a652f037263a8b6e429dfc50134860a35}{leer\_arbcelula}(\hyperlink{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{morfologia}, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+201 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a652f037263a8b6e429dfc50134860a35}{\index{Organismo@{Organismo}!leer\-\_\-arbcelula@{leer\-\_\-arbcelula}}
+\index{leer\-\_\-arbcelula@{leer\-\_\-arbcelula}!Organismo@{Organismo}}
+\subsubsection[{leer\-\_\-arbcelula}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::leer\-\_\-arbcelula (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbcel} \&}]{a, }
+\item[{int \&}]{idmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organismo_a652f037263a8b6e429dfc50134860a35}
+
+
+Definición en la línea 11 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+11                                                   \{
+12     \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} a1, a2;
+13     \hyperlink{class_celula}{Celula} c;
+14     c.\hyperlink{class_celula_a975bfa82da9b298581d0df62102a394c}{leer\_celula}();
+15     \textcolor{keywordflow}{if} (not c.\hyperlink{class_celula_a4e97c60a207191b2cc951ccdf245df4b}{es\_vacia}()) \{ \textcolor{comment}{// Si no es una célula marca leemos los dos subárboles}
+16         \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax} = max(\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax}, c.\hyperlink{class_celula_a521825572a84119f433c77e5707aadd6}{consul\_id}()); \textcolor{comment}{// Recalculamos el identificador máximo}
+17         \hyperlink{class_organismo_a652f037263a8b6e429dfc50134860a35}{leer\_arbcelula}(a1, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+18         \hyperlink{class_organismo_a652f037263a8b6e429dfc50134860a35}{leer\_arbcelula}(a2, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+19         a.plantar(c, a1, a2);
+20     \}
+21 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a5a465f8d1bbdc11182102fa96eb1202e}{\index{Organismo@{Organismo}!escribir\-\_\-arbcelula@{escribir\-\_\-arbcelula}}
+\index{escribir\-\_\-arbcelula@{escribir\-\_\-arbcelula}!Organismo@{Organismo}}
+\subsubsection[{escribir\-\_\-arbcelula}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::escribir\-\_\-arbcelula (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbcel} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organismo_a5a465f8d1bbdc11182102fa96eb1202e}
+
+
+Definición en la línea 25 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+25                                            \{
+26     \textcolor{keywordflow}{if} (not a.es\_buit()) \{
+27         \hyperlink{class_celula}{Celula} c = a.arrel();
+28         \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} a1, a2;
+29         a.fills(a1, a2);
+30         \hyperlink{class_organismo_a5a465f8d1bbdc11182102fa96eb1202e}{escribir\_arbcelula}(a1);
+31         cout << \textcolor{charliteral}{' '};
+32         c.\hyperlink{class_celula_ae476459eced4dd9982795efdc9a1c5fd}{escribir\_celula}();
+33         \hyperlink{class_organismo_a5a465f8d1bbdc11182102fa96eb1202e}{escribir\_arbcelula}(a2);
+34         a.plantar(c, a1, a2); \textcolor{comment}{// Replantamos para que el árbol se mantenga inalterado}
+35     \}
+36     \textcolor{keywordflow}{else} cout << \textcolor{charliteral}{' '} << 0;
+37 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a5b15ef34617e0c3642b04b518be27962}{\index{Organismo@{Organismo}!recortar\-\_\-arbcelula@{recortar\-\_\-arbcelula}}
+\index{recortar\-\_\-arbcelula@{recortar\-\_\-arbcelula}!Organismo@{Organismo}}
+\subsubsection[{recortar\-\_\-arbcelula}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::recortar\-\_\-arbcelula (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbcel} \&}]{a, }
+\item[{int \&}]{idmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organismo_a5b15ef34617e0c3642b04b518be27962}
+
+
+Definición en la línea 42 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+42                                                       \{
+43     \hyperlink{class_celula}{Celula} c = a.arrel();
+44     \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} fe, fd;
+45     a.fills(fe, fd);
+46     \textcolor{comment}{// Si alguno de los subárboles no es vacío entonces no hay que recortar (la célula se ha fisionado)}
+47     \textcolor{keywordflow}{if} (not fe.es\_buit() or not fd.es\_buit()) \{
+48         \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organismo_a5b15ef34617e0c3642b04b518be27962}{recortar\_arbcelula}(fe, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+49         \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organismo_a5b15ef34617e0c3642b04b518be27962}{recortar\_arbcelula}(fd, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+50         a.plantar(c, fe, fd);
+51         \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax} = max(\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax}, c.\hyperlink{class_celula_a521825572a84119f433c77e5707aadd6}{consul\_id}()); \textcolor{comment}{// Recalculamos el identificador máximo}
+52     \}
+53 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_af2228bd5b25c4ca5924d30f075cb13fc}{\index{Organismo@{Organismo}!estirar\-\_\-arbcelula@{estirar\-\_\-arbcelula}}
+\index{estirar\-\_\-arbcelula@{estirar\-\_\-arbcelula}!Organismo@{Organismo}}
+\subsubsection[{estirar\-\_\-arbcelula}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::estirar\-\_\-arbcelula (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbcel} \&}]{a, }
+\item[{int \&}]{idmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organismo_af2228bd5b25c4ca5924d30f075cb13fc}
+
+
+Definición en la línea 58 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+58                                                      \{
+59     \hyperlink{class_celula}{Celula} c = a.arrel();
+60     \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} fe, fd;
+61     a.fills(fe, fd);
+62     \textcolor{comment}{// Si las dos ramas son vacías fisionamos (estamos en una hoja)}
+63     \textcolor{keywordflow}{if} (fe.es\_buit() and fd.es\_buit()) \{
+64         \textcolor{comment}{// Creamos la célula izquierda}
+65         ++\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax};\textcolor{comment}{// Actualizamos el identificador máximo del organismo}
+66         \hyperlink{class_celula}{Celula} h1(\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax}, c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}());
+67         \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} fbuit; \textcolor{comment}{// Creamos un árbol vacío}
+68         fe.plantar(h1, fbuit, fbuit);
+69         \textcolor{comment}{// Creamos la célula derecha}
+70         ++\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax};
+71         \hyperlink{class_celula}{Celula} h2(\hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax}, c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}());
+72         fd.plantar(h2, fbuit, fbuit);
+73     \}
+74     \textcolor{keywordflow}{else} \{ \textcolor{comment}{// Si una de las dos ramas no es vacía entonces no hay que fisionar}
+75         \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organismo_af2228bd5b25c4ca5924d30f075cb13fc}{estirar\_arbcelula}(fe, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+76         \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organismo_af2228bd5b25c4ca5924d30f075cb13fc}{estirar\_arbcelula}(fd, \hyperlink{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{idmax});
+77     \}
+78     a.plantar(c, fe, fd);
+79 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a65395a14684f31fa2dadba6a3e037ad5}{\index{Organismo@{Organismo}!crear\-\_\-hijo@{crear\-\_\-hijo}}
+\index{crear\-\_\-hijo@{crear\-\_\-hijo}!Organismo@{Organismo}}
+\subsubsection[{crear\-\_\-hijo}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::crear\-\_\-hijo (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbcel} \&}]{x1, }
+\item[{{\bf Arbcel} \&}]{x2, }
+\item[{{\bf Arbcel} \&}]{h, }
+\item[{int \&}]{idmaxx1, }
+\item[{int \&}]{idmaxh, }
+\item[{int \&}]{tamint, }
+\item[{int \&}]{tamx1, }
+\item[{int \&}]{tamx2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organismo_a65395a14684f31fa2dadba6a3e037ad5}
+
+
+Definición en la línea 117 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+117                                                                                                            
+               \{
+118     \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} fe1, fd1, fe2, fd2, feh, fdh;
+119     \hyperlink{class_celula}{Celula} c1(x1.arrel());
+120     \hyperlink{class_celula}{Celula} c2(x2.arrel());
+121     x1.fills(fe1, fd1);
+122     x2.fills(fe2, fd2);
+123     ++tamint;
+124     ++tamx1;
+125     ++tamx2;
+126     idmaxh = max(idmaxh, c1.consul\_id());
+127 
+128     \textcolor{comment}{// Si los dos subárboles son no vacíos entonces seguimos en la intersección, sino tendremos que mirar
+       por separado}
+129     \textcolor{comment}{// los subarboles que no sean vacíos en otra función immersiva que se dedica a poner los clones}
+130 
+131     \textcolor{comment}{// Subárboles izquierdos}
+132     \textcolor{keywordflow}{if} (not fe1.es\_buit() and not fe2.es\_buit()) \hyperlink{class_organismo_a65395a14684f31fa2dadba6a3e037ad5}{crear\_hijo}(fe1, fe2, feh, idmaxx1, idmaxh, 
+      tamint, tamx1, tamx2);
+133     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fe1.es\_buit()) \hyperlink{class_organismo_ae702339f0378d08af4f30729a4f2307c}{colocar\_clones\_x1}(fe1, feh, tamx1, idmaxh);
+134     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fe2.es\_buit()) \hyperlink{class_organismo_a2614d55b5ce001c216fc24c2eed9bfef}{colocar\_clones\_x2}(fe2, feh, tamx2, idmaxh, idmaxx1);
+135     \textcolor{comment}{// Subárboles derechos}
+136     \textcolor{keywordflow}{if} (not fd1.es\_buit() and not fd2.es\_buit()) \hyperlink{class_organismo_a65395a14684f31fa2dadba6a3e037ad5}{crear\_hijo}(fd1, fd2, fdh, idmaxx1, idmaxh, 
+      tamint, tamx1, tamx2);
+137     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fd1.es\_buit()) \hyperlink{class_organismo_ae702339f0378d08af4f30729a4f2307c}{colocar\_clones\_x1}(fd1, fdh, tamx1, idmaxh);
+138     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fd2.es\_buit()) \hyperlink{class_organismo_a2614d55b5ce001c216fc24c2eed9bfef}{colocar\_clones\_x2}(fd2, fdh, tamx2, idmaxh, idmaxx1);
+139 
+140     h.plantar(\hyperlink{class_celula}{Celula}(c1.consul\_id(), c1.es\_activa() or c2.es\_activa()), feh, fdh);
+141     x1.plantar(c1, fe1, fd1);
+142     x2.plantar(c2, fe2, fd2);
+143 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_ae702339f0378d08af4f30729a4f2307c}{\index{Organismo@{Organismo}!colocar\-\_\-clones\-\_\-x1@{colocar\-\_\-clones\-\_\-x1}}
+\index{colocar\-\_\-clones\-\_\-x1@{colocar\-\_\-clones\-\_\-x1}!Organismo@{Organismo}}
+\subsubsection[{colocar\-\_\-clones\-\_\-x1}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::colocar\-\_\-clones\-\_\-x1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbcel} \&}]{a, }
+\item[{{\bf Arbcel} \&}]{h, }
+\item[{int \&}]{tam, }
+\item[{int \&}]{idmaxh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organismo_ae702339f0378d08af4f30729a4f2307c}
+
+
+Definición en la línea 81 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+81                                                                             \{
+82     ++tamx1;
+83     \hyperlink{class_celula}{Celula} c = x1.arrel();
+84     \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} fe, fd, feh, fdh;
+85     x1.fills(fe, fd);
+86 
+87     \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organismo_ae702339f0378d08af4f30729a4f2307c}{colocar\_clones\_x1}(fe, feh, tamx1, idmaxh);
+88     \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organismo_ae702339f0378d08af4f30729a4f2307c}{colocar\_clones\_x1}(fd, fdh, tamx1, idmaxh);
+89     \textcolor{comment}{// Si se ha plantado una activa en alguna rama inferior del árbol o la célula es activa entonces
+       tenemos que plantar}
+90     \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}() or not fe.es\_buit() or not fd.es\_buit()) \{
+91         h.plantar(c, feh, fdh);
+92         idmaxh = max(idmaxh, c.\hyperlink{class_celula_a521825572a84119f433c77e5707aadd6}{consul\_id}()); \textcolor{comment}{// Actualizamos el identificador máximo del hijo}
+93     \}
+94 
+95     x1.plantar(c, fe, fd); \textcolor{comment}{// Replantamos para no destruir el árbol del organismo que se reproduce}
+96 \}
+\end{DoxyCode}
+\hypertarget{class_organismo_a2614d55b5ce001c216fc24c2eed9bfef}{\index{Organismo@{Organismo}!colocar\-\_\-clones\-\_\-x2@{colocar\-\_\-clones\-\_\-x2}}
+\index{colocar\-\_\-clones\-\_\-x2@{colocar\-\_\-clones\-\_\-x2}!Organismo@{Organismo}}
+\subsubsection[{colocar\-\_\-clones\-\_\-x2}]{\setlength{\rightskip}{0pt plus 5cm}void Organismo\-::colocar\-\_\-clones\-\_\-x2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbcel} \&}]{a, }
+\item[{{\bf Arbcel} \&}]{h, }
+\item[{int \&}]{tam, }
+\item[{int \&}]{idmaxh, }
+\item[{int \&}]{idmaxx1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organismo_a2614d55b5ce001c216fc24c2eed9bfef}
+
+
+Definición en la línea 98 del archivo Organismo.\-cpp.
+
+
+\begin{DoxyCode}
+98                                                                                          \{
+99     ++tamx2;
+100     \hyperlink{class_celula}{Celula} c = x2.arrel();
+101     \hyperlink{class_organismo_a6d28459b85f211994ba446ba304fa141}{Arbcel} fe, fd, feh, fdh;
+102     x2.fills(fe, fd);
+103     \textcolor{keywordtype}{int} idcel = idmaxx1 + 1;
+104     \textcolor{keywordtype}{int} idmaxx1prima = idcel;
+105 
+106     \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organismo_a2614d55b5ce001c216fc24c2eed9bfef}{colocar\_clones\_x2}(fe, feh, tamx2, idmaxh, idmaxx1prima);
+107     \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organismo_a2614d55b5ce001c216fc24c2eed9bfef}{colocar\_clones\_x2}(fd, fdh, tamx2, idmaxh, idmaxx1prima);
+108     \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}() or not fe.es\_buit() or not fd.es\_buit()) \{
+109         h.plantar(\hyperlink{class_celula}{Celula}(idcel, c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}()), feh, fdh);
+110         idmaxh = max(idmaxh, idcel);
+111         idmaxx1 = idmaxx1prima;
+112     \}
+113 
+114     x2.plantar(c, fe, fd);
+115 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}{\index{Organismo@{Organismo}!morfologia@{morfologia}}
+\index{morfologia@{morfologia}!Organismo@{Organismo}}
+\subsubsection[{morfologia}]{\setlength{\rightskip}{0pt plus 5cm}Arbre$<${\bf Celula}$>$ Organismo\-::morfologia\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organismo_a6139c2cd4bf552831772ec94b36fcf39}
+
+
+Definición en la línea 105 del archivo Organismo.\-hpp.
+
+\hypertarget{class_organismo_ab191bedf8c3fb1e6e21e0d69dd35437f}{\index{Organismo@{Organismo}!recortado@{recortado}}
+\index{recortado@{recortado}!Organismo@{Organismo}}
+\subsubsection[{recortado}]{\setlength{\rightskip}{0pt plus 5cm}bool Organismo\-::recortado\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organismo_ab191bedf8c3fb1e6e21e0d69dd35437f}
+
+
+Representa la morfología del organismo, es decir, las células que lo conforman y las relaciones existentes entre ellas. 
+
+
+
+Definición en la línea 107 del archivo Organismo.\-hpp.
+
+\hypertarget{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}{\index{Organismo@{Organismo}!idmax@{idmax}}
+\index{idmax@{idmax}!Organismo@{Organismo}}
+\subsubsection[{idmax}]{\setlength{\rightskip}{0pt plus 5cm}int Organismo\-::idmax\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organismo_ae64c038f5e9a19d5c7d858a2b0fb58ee}
+
+
+Indica si el organismo ha sufrido un recorte. 
+
+
+
+Definición en la línea 108 del archivo Organismo.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_organismo_8hpp}{Organismo.\-hpp}\item 
+\hyperlink{_organismo_8cpp}{Organismo.\-cpp}\end{DoxyCompactItemize}

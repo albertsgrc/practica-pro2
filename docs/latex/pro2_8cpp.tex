@@ -1,0 +1,285 @@
+\hypertarget{pro2_8cpp}{\section{Referència del Fitxer pro2.\-cpp}
+\label{pro2_8cpp}\index{pro2.\-cpp@{pro2.\-cpp}}
+}
+
+
+Programa principal de la Pràctica de P\-R\-O2 {\itshape Reproducció al Laboratori}.  
+
+
+Inclou el graf de dependències per a pro2.\-cpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{pro2_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pro2_8cpp_af2c9832b3a1f0ccbc1c2c833c71355d0}{aplicar\-Estiraments\-Subcjt} (\hyperlink{class_sistema}{Sistema} \&sis)
+\begin{DoxyCompactList}\small\item\em Acció que duu a terme l'opció d'aplicar estiraments a un subconjunt d'organismes de l'experiment. \par
+ Aquells organismes llegits pel canal estàndar existents a l'experiment i que no hagin sigut retallats amb anterioritat han patiràn un estirament. \end{DoxyCompactList}\item 
+void \hyperlink{pro2_8cpp_aab789a2e4686ea12860641064a37cdc2}{aplicar\-Retallades\-Subcjt} (\hyperlink{class_sistema}{Sistema} \&sis)
+\begin{DoxyCompactList}\small\item\em Acció que duu a terme l'opció d'aplicar retallades a un subconjunt d'organismes de l'experiment. \par
+ Aquells organismes vius i existents a l'experiment llegits pel canal estàndar d'entrada patiràn una retallada. \end{DoxyCompactList}\item 
+void \hyperlink{pro2_8cpp_ad5bcf73bbef300ad36cf3a8f0eb7a824}{consultar\-Subcjt} (\hyperlink{class_sistema}{Sistema} \&sis)
+\begin{DoxyCompactList}\small\item\em Acció que duu a terme l'opció de consultar un subconjunt d'organismes de l'experiment. \par
+ Aquells organismes llegits pel canal estàndar que existeixin al sistema seràn escrits pel canal estàndar de sortida. \end{DoxyCompactList}\item 
+void \hyperlink{pro2_8cpp_a6e100e225d78059dc54d2b086a5d8895}{noti\-Final} (\hyperlink{class_sistema}{Sistema} \&sis, const \hyperlink{class_ranking}{Ranking} \&rank)
+\begin{DoxyCompactList}\small\item\em Acció que notifica sobre la causa del final de l'experiment. \par
+ S'escriu el nombre d'organismes totals que ha contingut l'experiment i el nombre d'organismes vius en el moment de la fi de l'experiment. \end{DoxyCompactList}\item 
+int \hyperlink{pro2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Programa principal de la Pràctica de P\-R\-O2 {\itshape Reproducció al Laboratori}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{pro2_8cpp_ab53e564e575059ed07f054f950af7c03}{E\-S\-T\-I\-R\-A\-M\-E\-N\-T} = -\/1
+\item 
+const int \hyperlink{pro2_8cpp_aa5432982922ef6b26ff9487a76646c94}{R\-E\-T\-A\-L\-L\-A\-D\-A} = -\/2
+\item 
+const int \hyperlink{pro2_8cpp_a95b449721b616d1608c8c062bda9eb52}{R\-O\-N\-D\-A\-R\-E\-P} = -\/3
+\item 
+const int \hyperlink{pro2_8cpp_ac56cc8ca3a8ff340d77d045bd895ca0e}{O\-B\-T\-R\-A\-N\-K\-I\-N\-G} = -\/4
+\item 
+const int \hyperlink{pro2_8cpp_a1c288e39facf9ad6bf7f1d8fe3a40104}{C\-O\-N\-S\-U\-L\-E\-S\-T} = -\/5
+\item 
+const int \hyperlink{pro2_8cpp_a32c576e3755824cfad8559ab4037310e}{F\-I\-N\-A\-L} = -\/6
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Programa principal de la Pràctica de P\-R\-O2 {\itshape Reproducció al Laboratori}. En aquesta pràctica suposem que les dades llegides sempre són correctes, en conseqüència no es fan comprovacions sobre l'entrada. Les opcions a aplicar a l'experiment es representen amb nombres negatius, del -\/1 al -\/6. 
+
+Definició al fitxer \hyperlink{pro2_8cpp_source}{pro2.\-cpp}.
+
+
+
+\subsection{Documentació de les Funcions}
+\hypertarget{pro2_8cpp_af2c9832b3a1f0ccbc1c2c833c71355d0}{\index{pro2.\-cpp@{pro2.\-cpp}!aplicar\-Estiraments\-Subcjt@{aplicar\-Estiraments\-Subcjt}}
+\index{aplicar\-Estiraments\-Subcjt@{aplicar\-Estiraments\-Subcjt}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{aplicar\-Estiraments\-Subcjt}]{\setlength{\rightskip}{0pt plus 5cm}void aplicar\-Estiraments\-Subcjt (
+\begin{DoxyParamCaption}
+\item[{{\bf Sistema} \&}]{sis}
+\end{DoxyParamCaption}
+)}}\label{pro2_8cpp_af2c9832b3a1f0ccbc1c2c833c71355d0}
+
+
+Acció que duu a terme l'opció d'aplicar estiraments a un subconjunt d'organismes de l'experiment. \par
+ Aquells organismes llegits pel canal estàndar existents a l'experiment i que no hagin sigut retallats amb anterioritat han patiràn un estirament. 
+
+
+
+Definició a la línia 78 del fitxer pro2.\-cpp.
+
+
+\begin{DoxyCode}
+78                                            \{
+79     \textcolor{keywordtype}{int} L = readint();
+80 
+81     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < L; ++i) \{
+82         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = readint();
+83         \textcolor{comment}{// Només ens cal comprovar que l'organisme és estirable}
+84         \textcolor{comment}{// (existeix i no s'ha retallat amb anterioritat) i retallar-lo}
+85         \textcolor{comment}{// en cas afirmatiu}
+86         \textcolor{keywordflow}{if} (sis.\hyperlink{class_sistema_a3ab5d199d6f7af87c3b00f51702da9dc}{es\_estirable\_org}(\textcolor{keywordtype}{id})) sis.\hyperlink{class_sistema_abe6ae69cefc9adb10b7650635b1f7336}{estirar\_org}(\textcolor{keywordtype}{id});
+87     \}
+88 \}
+\end{DoxyCode}
+\hypertarget{pro2_8cpp_aab789a2e4686ea12860641064a37cdc2}{\index{pro2.\-cpp@{pro2.\-cpp}!aplicar\-Retallades\-Subcjt@{aplicar\-Retallades\-Subcjt}}
+\index{aplicar\-Retallades\-Subcjt@{aplicar\-Retallades\-Subcjt}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{aplicar\-Retallades\-Subcjt}]{\setlength{\rightskip}{0pt plus 5cm}void aplicar\-Retallades\-Subcjt (
+\begin{DoxyParamCaption}
+\item[{{\bf Sistema} \&}]{sis}
+\end{DoxyParamCaption}
+)}}\label{pro2_8cpp_aab789a2e4686ea12860641064a37cdc2}
+
+
+Acció que duu a terme l'opció d'aplicar retallades a un subconjunt d'organismes de l'experiment. \par
+ Aquells organismes vius i existents a l'experiment llegits pel canal estàndar d'entrada patiràn una retallada. 
+
+
+
+Definició a la línia 95 del fitxer pro2.\-cpp.
+
+
+\begin{DoxyCode}
+95                                           \{
+96     \textcolor{keywordtype}{int} L = readint();
+97 
+98     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < L; ++i) \{
+99         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = readint();
+100         \textcolor{comment}{// Només ens cal comprovar que existeix i és viu, i retallar-lo en}
+101         \textcolor{comment}{// conseqüència}
+102         \textcolor{keywordflow}{if} (sis.\hyperlink{class_sistema_a3eba48be6e01d213f87d9c12c22530fe}{es\_viu\_org}(\textcolor{keywordtype}{id})) sis.\hyperlink{class_sistema_a873e9e89616d383f864191304f804063}{retallar\_org}(\textcolor{keywordtype}{id});
+103     \}
+104 \}
+\end{DoxyCode}
+\hypertarget{pro2_8cpp_ad5bcf73bbef300ad36cf3a8f0eb7a824}{\index{pro2.\-cpp@{pro2.\-cpp}!consultar\-Subcjt@{consultar\-Subcjt}}
+\index{consultar\-Subcjt@{consultar\-Subcjt}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{consultar\-Subcjt}]{\setlength{\rightskip}{0pt plus 5cm}void consultar\-Subcjt (
+\begin{DoxyParamCaption}
+\item[{{\bf Sistema} \&}]{sis}
+\end{DoxyParamCaption}
+)}}\label{pro2_8cpp_ad5bcf73bbef300ad36cf3a8f0eb7a824}
+
+
+Acció que duu a terme l'opció de consultar un subconjunt d'organismes de l'experiment. \par
+ Aquells organismes llegits pel canal estàndar que existeixin al sistema seràn escrits pel canal estàndar de sortida. 
+
+
+
+Definició a la línia 111 del fitxer pro2.\-cpp.
+
+
+\begin{DoxyCode}
+111                                   \{
+112     \textcolor{keywordtype}{int} L = readint();
+113 
+114     cout << \textcolor{stringliteral}{"ORGANISMOS"} << endl;
+115     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < L; ++i) \{
+116         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = readint();
+117         \textcolor{comment}{// Comprovem que existeix, i en cas afirmatiu l'escrivim}
+118         \textcolor{keywordflow}{if} (sis.\hyperlink{class_sistema_aa56f1fe7fee226ff6624363695ace488}{existeix\_org}(\textcolor{keywordtype}{id})) sis.\hyperlink{class_sistema_ad3028a34f72a19d63a2d126bb4422b5b}{escriure\_org}(\textcolor{keywordtype}{id});
+119     \}
+120     cout << endl;
+121 \}
+\end{DoxyCode}
+\hypertarget{pro2_8cpp_a6e100e225d78059dc54d2b086a5d8895}{\index{pro2.\-cpp@{pro2.\-cpp}!noti\-Final@{noti\-Final}}
+\index{noti\-Final@{noti\-Final}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{noti\-Final}]{\setlength{\rightskip}{0pt plus 5cm}void noti\-Final (
+\begin{DoxyParamCaption}
+\item[{{\bf Sistema} \&}]{sis, }
+\item[{const {\bf Ranking} \&}]{rank}
+\end{DoxyParamCaption}
+)}}\label{pro2_8cpp_a6e100e225d78059dc54d2b086a5d8895}
+
+
+Acció que notifica sobre la causa del final de l'experiment. \par
+ S'escriu el nombre d'organismes totals que ha contingut l'experiment i el nombre d'organismes vius en el moment de la fi de l'experiment. 
+
+
+
+Definició a la línia 127 del fitxer pro2.\-cpp.
+
+
+\begin{DoxyCode}
+127                                                 \{
+128     cout << \textcolor{stringliteral}{"FIN"} << endl << endl
+129          << \textcolor{stringliteral}{"Organismos en total : "} << sis.\hyperlink{class_sistema_a084895a86d0230cbb4af0d0041422fe3}{consul\_pob}() << endl
+130          << \textcolor{stringliteral}{"Organismos vivos : "} << sis.\hyperlink{class_sistema_a112609f3baf6a0267ce61aab10020418}{consul\_nvius}() << endl << endl;
+131 
+132     \textcolor{keywordflow}{if} (sis.\hyperlink{class_sistema_adbaf521a9576706bf2212f7ce24d2d0e}{esta\_ple}()) \{
+133         cout << \textcolor{stringliteral}{"ORGANISMOS"} << endl;
+134         \textcolor{comment}{/* Escrivim els organismes nascuts en l'última ronda}
+135 \textcolor{comment}{           en ordre creixent per identificador. Per la condició}
+136 \textcolor{comment}{           de l'if sabem que si N és la població actual (de fet coincideix}
+137 \textcolor{comment}{           amb la població màxima permesa) i el nombre}
+138 \textcolor{comment}{           d'organismes nascuts a l'última reproducció és R aleshores}
+139 \textcolor{comment}{           tenen per identificadors [N-R+1...N], ja que els identificadors}
+140 \textcolor{comment}{           s'assignen correlativament de menor a major a mesura que neixen}
+141 \textcolor{comment}{           nous organismes */}
+142         \textcolor{keywordtype}{int} pob = sis.\hyperlink{class_sistema_a084895a86d0230cbb4af0d0041422fe3}{consul\_pob}();
+143         \textcolor{keywordtype}{int} nfillsur = sis.\hyperlink{class_sistema_ad7f3d8c32a3792fec6c4641769c07c04}{consul\_fills\_repr}();
+144         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = pob - nfillsur + 1; i <= pob; ++i) \{
+145             sis.\hyperlink{class_sistema_ad3028a34f72a19d63a2d126bb4422b5b}{escriure\_org}(i);
+146         \}
+147         cout << endl << \textcolor{stringliteral}{"RANKING"} << endl;
+148         rank.\hyperlink{class_ranking_aba7a9802d6d3881a19d6fb136b705e07}{escriure\_ranking}(sis.\hyperlink{class_sistema_a084895a86d0230cbb4af0d0041422fe3}{consul\_pob}());
+149     \}
+150 \}
+\end{DoxyCode}
+\hypertarget{pro2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{pro2.\-cpp@{pro2.\-cpp}!main@{main}}
+\index{main@{main}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pro2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Programa principal de la Pràctica de P\-R\-O2 {\itshape Reproducció al Laboratori}. 
+
+
+
+Definició a la línia 155 del fitxer pro2.\-cpp.
+
+
+\begin{DoxyCode}
+155            \{
+156     \textcolor{keywordtype}{int} N = readint(); \textcolor{comment}{// Població inicial de l'experiment}
+157     \textcolor{keywordtype}{int} M = readint(); \textcolor{comment}{// Població màxima permesa de l'experiment}
+158     \hyperlink{class_sistema}{Sistema} sis(M);
+159     sis.llegir\_pob\_ini(N);
+160     \hyperlink{class_ranking}{Ranking} rank(M);
+161 
+162     \textcolor{keywordtype}{int} op; \textcolor{comment}{// Codi d'operació}
+163     \textcolor{keywordflow}{while} (sis.consul\_nvius() > 0 and not sis.esta\_ple()
+164                                   and cin >> op and op != \hyperlink{pro2_8cpp_a32c576e3755824cfad8559ab4037310e}{FINAL}) \{
+165         \textcolor{keywordflow}{switch} (op) \{
+166             \textcolor{keywordflow}{case} \hyperlink{pro2_8cpp_ab53e564e575059ed07f054f950af7c03}{ESTIRAMENT}: \hyperlink{pro2_8cpp_af2c9832b3a1f0ccbc1c2c833c71355d0}{aplicarEstiramentsSubcjt}(sis);
+167             \textcolor{keywordflow}{break};
+168             \textcolor{keywordflow}{case} \hyperlink{pro2_8cpp_aa5432982922ef6b26ff9487a76646c94}{RETALLADA}: \hyperlink{pro2_8cpp_aab789a2e4686ea12860641064a37cdc2}{aplicarRetalladesSubcjt}(sis);
+169             \textcolor{keywordflow}{break};
+170             \textcolor{keywordflow}{case} \hyperlink{pro2_8cpp_a95b449721b616d1608c8c062bda9eb52}{RONDAREP}:
+171                 cout << \textcolor{stringliteral}{"RONDA DE EMPAREJAMIENTOS"} << endl;
+172                 sis.aplicar\_ronda\_reproduccio(rank);
+173                 cout << \textcolor{stringliteral}{"Nuevos organismos : "} << sis.consul\_fills\_repr()
+174                      << endl << endl;
+175             \textcolor{keywordflow}{break};
+176             \textcolor{keywordflow}{case} \hyperlink{pro2_8cpp_ac56cc8ca3a8ff340d77d045bd895ca0e}{OBTRANKING}:
+177                 cout << \textcolor{stringliteral}{"RANKING"} << endl;
+178                 rank.escriure\_ranking(sis.consul\_pob());
+179             \textcolor{keywordflow}{break};
+180             \textcolor{keywordflow}{case} \hyperlink{pro2_8cpp_a1c288e39facf9ad6bf7f1d8fe3a40104}{CONSULEST}: \hyperlink{pro2_8cpp_ad5bcf73bbef300ad36cf3a8f0eb7a824}{consultarSubcjt}(sis);
+181             \textcolor{keywordflow}{break};
+182         \}
+183     \}
+184 
+185     \hyperlink{pro2_8cpp_a6e100e225d78059dc54d2b086a5d8895}{notiFinal}(sis, rank);
+186 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Variables}
+\hypertarget{pro2_8cpp_ab53e564e575059ed07f054f950af7c03}{\index{pro2.\-cpp@{pro2.\-cpp}!E\-S\-T\-I\-R\-A\-M\-E\-N\-T@{E\-S\-T\-I\-R\-A\-M\-E\-N\-T}}
+\index{E\-S\-T\-I\-R\-A\-M\-E\-N\-T@{E\-S\-T\-I\-R\-A\-M\-E\-N\-T}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{E\-S\-T\-I\-R\-A\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int E\-S\-T\-I\-R\-A\-M\-E\-N\-T = -\/1}}\label{pro2_8cpp_ab53e564e575059ed07f054f950af7c03}
+
+
+Definició a la línia 66 del fitxer pro2.\-cpp.
+
+\hypertarget{pro2_8cpp_aa5432982922ef6b26ff9487a76646c94}{\index{pro2.\-cpp@{pro2.\-cpp}!R\-E\-T\-A\-L\-L\-A\-D\-A@{R\-E\-T\-A\-L\-L\-A\-D\-A}}
+\index{R\-E\-T\-A\-L\-L\-A\-D\-A@{R\-E\-T\-A\-L\-L\-A\-D\-A}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{R\-E\-T\-A\-L\-L\-A\-D\-A}]{\setlength{\rightskip}{0pt plus 5cm}const int R\-E\-T\-A\-L\-L\-A\-D\-A = -\/2}}\label{pro2_8cpp_aa5432982922ef6b26ff9487a76646c94}
+
+
+Definició a la línia 67 del fitxer pro2.\-cpp.
+
+\hypertarget{pro2_8cpp_a95b449721b616d1608c8c062bda9eb52}{\index{pro2.\-cpp@{pro2.\-cpp}!R\-O\-N\-D\-A\-R\-E\-P@{R\-O\-N\-D\-A\-R\-E\-P}}
+\index{R\-O\-N\-D\-A\-R\-E\-P@{R\-O\-N\-D\-A\-R\-E\-P}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{R\-O\-N\-D\-A\-R\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}const int R\-O\-N\-D\-A\-R\-E\-P = -\/3}}\label{pro2_8cpp_a95b449721b616d1608c8c062bda9eb52}
+
+
+Definició a la línia 68 del fitxer pro2.\-cpp.
+
+\hypertarget{pro2_8cpp_ac56cc8ca3a8ff340d77d045bd895ca0e}{\index{pro2.\-cpp@{pro2.\-cpp}!O\-B\-T\-R\-A\-N\-K\-I\-N\-G@{O\-B\-T\-R\-A\-N\-K\-I\-N\-G}}
+\index{O\-B\-T\-R\-A\-N\-K\-I\-N\-G@{O\-B\-T\-R\-A\-N\-K\-I\-N\-G}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{O\-B\-T\-R\-A\-N\-K\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}const int O\-B\-T\-R\-A\-N\-K\-I\-N\-G = -\/4}}\label{pro2_8cpp_ac56cc8ca3a8ff340d77d045bd895ca0e}
+
+
+Definició a la línia 69 del fitxer pro2.\-cpp.
+
+\hypertarget{pro2_8cpp_a1c288e39facf9ad6bf7f1d8fe3a40104}{\index{pro2.\-cpp@{pro2.\-cpp}!C\-O\-N\-S\-U\-L\-E\-S\-T@{C\-O\-N\-S\-U\-L\-E\-S\-T}}
+\index{C\-O\-N\-S\-U\-L\-E\-S\-T@{C\-O\-N\-S\-U\-L\-E\-S\-T}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{C\-O\-N\-S\-U\-L\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int C\-O\-N\-S\-U\-L\-E\-S\-T = -\/5}}\label{pro2_8cpp_a1c288e39facf9ad6bf7f1d8fe3a40104}
+
+
+Definició a la línia 70 del fitxer pro2.\-cpp.
+
+\hypertarget{pro2_8cpp_a32c576e3755824cfad8559ab4037310e}{\index{pro2.\-cpp@{pro2.\-cpp}!F\-I\-N\-A\-L@{F\-I\-N\-A\-L}}
+\index{F\-I\-N\-A\-L@{F\-I\-N\-A\-L}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{F\-I\-N\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}const int F\-I\-N\-A\-L = -\/6}}\label{pro2_8cpp_a32c576e3755824cfad8559ab4037310e}
+
+
+Definició a la línia 71 del fitxer pro2.\-cpp.
+

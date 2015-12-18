@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Pràctica de PRO2: Reproducció al Laboratori: Fitxer de Codi Celula.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pràctica de PRO2: Reproducció al Laboratori
+   &#160;<span id="projectnumber">versió 18-maig-2014</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicions de Tipus</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Celula.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_celula_8cpp.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_celula_8hpp.html">Celula.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/****** OPERACIONS PUBLIQUES******/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Constructores</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_celula.html#a3c5017fbcec8cb564acc666aa7e21206">   12</a></span>&#160;<a class="code" href="class_celula.html#a3c5017fbcec8cb564acc666aa7e21206">Celula::Celula</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">id</span> = <a class="code" href="class_celula.html#a22f5121a6d3cc3cee44274b55ec842e9">ID_BUIDA</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a> = <span class="keyword">false</span>; <span class="comment">// Definim que les celules buides son passives</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_celula.html#abb139a1803c167a0cf4eb299746b7f2e">   17</a></span>&#160;<a class="code" href="class_celula.html#a3c5017fbcec8cb564acc666aa7e21206">Celula::Celula</a>(<span class="keywordtype">int</span> identificador, <span class="keywordtype">bool</span> activitat) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">id</span> = identificador;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a> = activitat;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_celula.html#ae46715be0b1a9b7531f54691148f88b8">   22</a></span>&#160;<a class="code" href="class_celula.html#a3c5017fbcec8cb564acc666aa7e21206">Celula::Celula</a>(<span class="keyword">const</span> <a class="code" href="class_celula.html">Celula</a>&amp;c) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">id</span> = c.<a class="code" href="class_celula.html#a0984a8b3deeed4979ed6f6141edc3c0c">id</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a> = c.<a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Destructores</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_celula.html#aa102b024e4c8d91a2f69afa14d4e4130">   29</a></span>&#160;<a class="code" href="class_celula.html#aa102b024e4c8d91a2f69afa14d4e4130">Celula::~Celula</a>() {}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Consultores</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_celula.html#a0d5c352e0b5c3187767dbcef413b51a9">   33</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_celula.html#a0d5c352e0b5c3187767dbcef413b51a9">Celula::es_buida</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <span class="keywordtype">id</span> == <a class="code" href="class_celula.html#a22f5121a6d3cc3cee44274b55ec842e9">ID_BUIDA</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_celula.html#a25bbae8df2eb0b60202829321175e3f7">   37</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_celula.html#a25bbae8df2eb0b60202829321175e3f7">Celula::es_activa</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_celula.html#a521825572a84119f433c77e5707aadd6">   41</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_celula.html#a521825572a84119f433c77e5707aadd6">Celula::consul_id</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_celula.html#a0984a8b3deeed4979ed6f6141edc3c0c">id</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_celula.html#a75b2519d8063e841dea7b9d6fd1506ab">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_celula.html#a75b2519d8063e841dea7b9d6fd1506ab">Celula::escriure_celula</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">/* Escrivim l&#39;identificador de la cel·lula i la informacio</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">       sobre la seva activitat/passivitat */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    cout &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a>) cout &lt;&lt; <a class="code" href="class_celula.html#a3c06376789ddb1605295cbf3835d01bb">ACTIVA</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> cout &lt;&lt; <a class="code" href="class_celula.html#aea4803f947d114aaea4861232f6f3a38">PASSIVA</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// Modificadores</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_celula.html#a8b78a83ccbaa5be1cea1ffd47972279c">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_celula.html#a8b78a83ccbaa5be1cea1ffd47972279c">Celula::llegir_celula</a>() {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">/* Es tracta de llegir la informacio necessaria per definir la celula,</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">       en aquest cas l&#39;identificador i la passivitat/activitat, tenint en</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">       compte que si la celula es buida no ens cal tenir informacio sobre</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">       la seva activitat, pero com que hem definit que les celules buides</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">       siguin passives, hem d&#39;assignar la seva passivitat */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">id</span> = readint();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != <a class="code" href="class_celula.html#a22f5121a6d3cc3cee44274b55ec842e9">ID_BUIDA</a>) <a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a> = readbool();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">else</span> <a class="code" href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">activa</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="ttc" id="_celula_8hpp_html"><div class="ttname"><a href="_celula_8hpp.html">Celula.hpp</a></div><div class="ttdoc">Especificació de la classe Celula de la Pràctica de PRO2 Reproducció al Laboratori. </div></div>
+<div class="ttc" id="class_celula_html_a22f5121a6d3cc3cee44274b55ec842e9"><div class="ttname"><a href="class_celula.html#a22f5121a6d3cc3cee44274b55ec842e9">Celula::ID_BUIDA</a></div><div class="ttdeci">static const int ID_BUIDA</div><div class="ttdoc">Identificador especial per cèl·lules buides. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8hpp_source.html#l00125">Celula.hpp:125</a></div></div>
+<div class="ttc" id="class_celula_html"><div class="ttname"><a href="class_celula.html">Celula</a></div><div class="ttdoc">Representa una cèlula d&amp;#39;un organisme. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8hpp_source.html#l00029">Celula.hpp:29</a></div></div>
+<div class="ttc" id="class_celula_html_aea4803f947d114aaea4861232f6f3a38"><div class="ttname"><a href="class_celula.html#aea4803f947d114aaea4861232f6f3a38">Celula::PASSIVA</a></div><div class="ttdeci">static const int PASSIVA</div><div class="ttdoc">Representació de les cèl·lules passives. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8hpp_source.html#l00127">Celula.hpp:127</a></div></div>
+<div class="ttc" id="class_celula_html_a75b2519d8063e841dea7b9d6fd1506ab"><div class="ttname"><a href="class_celula.html#a75b2519d8063e841dea7b9d6fd1506ab">Celula::escriure_celula</a></div><div class="ttdeci">void escriure_celula() const </div><div class="ttdoc">Operació d&amp;#39;escriptura d&amp;#39;una cèl·lula. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8cpp_source.html#l00045">Celula.cpp:45</a></div></div>
+<div class="ttc" id="class_celula_html_aa102b024e4c8d91a2f69afa14d4e4130"><div class="ttname"><a href="class_celula.html#aa102b024e4c8d91a2f69afa14d4e4130">Celula::~Celula</a></div><div class="ttdeci">~Celula()</div><div class="ttdoc">Destructora per defecte. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8cpp_source.html#l00029">Celula.cpp:29</a></div></div>
+<div class="ttc" id="class_celula_html_a8b78a83ccbaa5be1cea1ffd47972279c"><div class="ttname"><a href="class_celula.html#a8b78a83ccbaa5be1cea1ffd47972279c">Celula::llegir_celula</a></div><div class="ttdeci">void llegir_celula()</div><div class="ttdoc">Operació de lectura d&amp;#39;una cèl·lula. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8cpp_source.html#l00055">Celula.cpp:55</a></div></div>
+<div class="ttc" id="class_celula_html_a521825572a84119f433c77e5707aadd6"><div class="ttname"><a href="class_celula.html#a521825572a84119f433c77e5707aadd6">Celula::consul_id</a></div><div class="ttdeci">int consul_id() const </div><div class="ttdoc">Consultora de l&amp;#39;identificador d&amp;#39;una cèl·lula. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8cpp_source.html#l00041">Celula.cpp:41</a></div></div>
+<div class="ttc" id="class_celula_html_a0984a8b3deeed4979ed6f6141edc3c0c"><div class="ttname"><a href="class_celula.html#a0984a8b3deeed4979ed6f6141edc3c0c">Celula::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">Conté l&amp;#39;identificador de la cèl·lula. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8hpp_source.html#l00121">Celula.hpp:121</a></div></div>
+<div class="ttc" id="class_celula_html_a3c5017fbcec8cb564acc666aa7e21206"><div class="ttname"><a href="class_celula.html#a3c5017fbcec8cb564acc666aa7e21206">Celula::Celula</a></div><div class="ttdeci">Celula()</div><div class="ttdoc">Creadora per defecte. S&amp;#39;executa automàticament al declarar una Celula. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8cpp_source.html#l00012">Celula.cpp:12</a></div></div>
+<div class="ttc" id="class_celula_html_a0d5c352e0b5c3187767dbcef413b51a9"><div class="ttname"><a href="class_celula.html#a0d5c352e0b5c3187767dbcef413b51a9">Celula::es_buida</a></div><div class="ttdeci">bool es_buida() const </div><div class="ttdoc">Consultora que indica si una cèl·lula és buida. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8cpp_source.html#l00033">Celula.cpp:33</a></div></div>
+<div class="ttc" id="class_celula_html_a3c06376789ddb1605295cbf3835d01bb"><div class="ttname"><a href="class_celula.html#a3c06376789ddb1605295cbf3835d01bb">Celula::ACTIVA</a></div><div class="ttdeci">static const int ACTIVA</div><div class="ttdoc">Representació de les cèl·lules actives. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8hpp_source.html#l00129">Celula.hpp:129</a></div></div>
+<div class="ttc" id="class_celula_html_a25bbae8df2eb0b60202829321175e3f7"><div class="ttname"><a href="class_celula.html#a25bbae8df2eb0b60202829321175e3f7">Celula::es_activa</a></div><div class="ttdeci">bool es_activa() const </div><div class="ttdoc">Consultora de la activitat/passivitat d&amp;#39;una cèl·lula. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8cpp_source.html#l00037">Celula.cpp:37</a></div></div>
+<div class="ttc" id="class_celula_html_a22ec0fe5fde605b5b3067acde093a3f7"><div class="ttname"><a href="class_celula.html#a22ec0fe5fde605b5b3067acde093a3f7">Celula::activa</a></div><div class="ttdeci">bool activa</div><div class="ttdoc">Indica si la cèl·lula és activa o passiva. </div><div class="ttdef"><b>Definition:</b> <a href="_celula_8hpp_source.html#l00123">Celula.hpp:123</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>
