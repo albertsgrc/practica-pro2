@@ -1,0 +1,260 @@
+ORGANISMOS
+1 : 0 2 -1 0 25 -1 0 5 -1 0 4 -1 0 7 -1 0 3 -1 0 8 -1 0 11 -1 0 10 -1 0 9 -1 0 1 -1 0 15 -1 0 14 -1 0 18 -1 0 17 -1 0 19 -1 0 16 -1 0 13 -1 0 20 -1 0 12 -1 0 
+2 : 0 70 1 0 11 1 0 10 1 0 23 1 0 16 1 0 25 1 0 17 1 0 65 1 0 32 1 0 52 1 0 47 1 0 5 1 0 41 1 0 99 1 0 33 1 0 66 1 0 92 1 0 55 1 0 12 1 0 6 1 0 21 1 0 95 1 0 2 1 0 
+3 : 0 17 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 20 1 0 9 -1 0 
+4 : 0 4 -1 0 2 1 0 5 -1 0 1 -1 0 6 1 0 3 1 0 7 -1 0 
+
+// La parella 1-2 genera l'organisme 5 (són compatibles) i la parella 3-4 genera l'organisme 6 (també són compatibles)
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 2 
+
+ORGANISMOS
+1 : 0 2 -1 0 25 -1 0 5 -1 0 4 -1 0 7 -1 0 3 -1 0 8 -1 0 11 -1 0 10 -1 0 9 -1 0 1 -1 0 15 -1 0 14 -1 0 18 -1 0 17 -1 0 19 -1 0 16 -1 0 13 -1 0 20 -1 0 12 -1 0 
+2 : 0 70 1 0 11 1 0 10 1 0 23 1 0 16 1 0 25 1 0 17 1 0 65 1 0 32 1 0 52 1 0 47 1 0 5 1 0 41 1 0 99 1 0 33 1 0 66 1 0 92 1 0 55 1 0 12 1 0 6 1 0 21 1 0 95 1 0 2 1 0 
+3 : 0 17 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 20 1 0 9 -1 0 
+4 : 0 4 -1 0 2 1 0 5 -1 0 1 -1 0 6 1 0 3 1 0 7 -1 0 
+5 : 0 2 1 0 4 1 0 3 1 0 8 1 0 10 1 0 9 1 0 26 1 0 28 1 0 27 1 0 30 1 0 29 1 0 1 1 0 33 1 0 34 1 0 32 1 0 31 1 0 35 1 0 15 1 0 14 1 0 16 1 0 13 1 0 20 1 0 12 1 0 
+6 : 0 17 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 21 1 0 18 1 0 20 1 0 9 -1 0 
+
+RANKING
+1 : 2 5
+2 : 1 5
+3 : 4 6
+4 : 3 6
+5 :
+6 :
+
+// En aquesta ronda es reprodueixen el 1-3, el 2-4 i 5-6. Cap parella és compatible, per tant no es genera cap fill
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 0
+
+RANKING
+1 : 2 5
+2 : 1 5
+3 : 4 6
+4 : 3 6
+5 :
+6 :
+
+// Comprovem l'estat inicial dels organismes
+ORGANISMOS
+1 : 0 2 -1 0 25 -1 0 5 -1 0 4 -1 0 7 -1 0 3 -1 0 8 -1 0 11 -1 0 10 -1 0 9 -1 0 1 -1 0 15 -1 0 14 -1 0 18 -1 0 17 -1 0 19 -1 0 16 -1 0 13 -1 0 20 -1 0 12 -1 0 
+2 : 0 70 1 0 11 1 0 10 1 0 23 1 0 16 1 0 25 1 0 17 1 0 65 1 0 32 1 0 52 1 0 47 1 0 5 1 0 41 1 0 99 1 0 33 1 0 66 1 0 92 1 0 55 1 0 12 1 0 6 1 0 21 1 0 95 1 0 2 1 0 
+3 : 0 17 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 20 1 0 9 -1 0 
+4 : 0 4 -1 0 2 1 0 5 -1 0 1 -1 0 6 1 0 3 1 0 7 -1 0 
+5 : 0 2 1 0 4 1 0 3 1 0 8 1 0 10 1 0 9 1 0 26 1 0 28 1 0 27 1 0 30 1 0 29 1 0 1 1 0 33 1 0 34 1 0 32 1 0 31 1 0 35 1 0 15 1 0 14 1 0 16 1 0 13 1 0 20 1 0 12 1 0 
+6 : 0 17 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 21 1 0 18 1 0 20 1 0 9 -1 0 
+
+// Es pot apreciar que els organismes 1 i 2 s'han retallat correctament
+ORGANISMOS
+1 : 0 2 -1 0 5 -1 0 4 -1 0 3 -1 0 8 -1 0 10 -1 0 9 -1 0 1 -1 0 14 -1 0 17 -1 0 16 -1 0 13 -1 0 12 -1 0 
+2 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 47 1 0 5 1 0 41 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+3 : 0 17 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 20 1 0 9 -1 0 
+4 : 0 4 -1 0 2 1 0 5 -1 0 1 -1 0 6 1 0 3 1 0 7 -1 0 
+5 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 13 1 0 12 1 0 
+6 : 0 17 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 21 1 0 18 1 0 20 1 0 9 -1 0 
+
+// Es pot apreciar que només s'han estirat els organismes 3, 4 i 6. El 1 i 2 no s'estiren ja que s'havien retallat anteriorment
+ORGANISMOS
+1 : 0 2 -1 0 5 -1 0 4 -1 0 3 -1 0 8 -1 0 10 -1 0 9 -1 0 1 -1 0 14 -1 0 17 -1 0 16 -1 0 13 -1 0 12 -1 0 
+2 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 47 1 0 5 1 0 41 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+3 : 0 21 1 0 17 1 0 22 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 23 1 0 20 1 0 24 1 0 9 -1 0 
+4 : 0 8 -1 0 4 -1 0 9 -1 0 2 1 0 10 -1 0 5 -1 0 11 -1 0 1 -1 0 12 1 0 6 1 0 13 1 0 3 1 0 14 -1 0 7 -1 0 15 -1 0 
+5 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 13 1 0 12 1 0 
+6 : 0 22 1 0 17 1 0 23 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 24 1 0 21 1 0 25 1 0 18 1 0 26 1 0 20 1 0 27 1 0 9 -1 0 
+
+// En aquesta ronda es reprodueixen el 1 i el 2, que són compatibles i generen el fill 7, i el 2 i el 3
+// que són incompatibles. El 5 i el 6 no es reprodueixen ja que s'han emparellat anteriorment entre ells
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+
+ORGANISMOS
+1 : 0 2 -1 0 5 -1 0 4 -1 0 3 -1 0 8 -1 0 10 -1 0 9 -1 0 1 -1 0 14 -1 0 17 -1 0 16 -1 0 13 -1 0 12 -1 0 
+2 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 47 1 0 5 1 0 41 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+3 : 0 21 1 0 17 1 0 22 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 23 1 0 20 1 0 24 1 0 9 -1 0 
+4 : 0 8 -1 0 4 -1 0 9 -1 0 2 1 0 10 -1 0 5 -1 0 11 -1 0 1 -1 0 12 1 0 6 1 0 13 1 0 3 1 0 14 -1 0 7 -1 0 15 -1 0 
+5 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 13 1 0 12 1 0 
+6 : 0 22 1 0 17 1 0 23 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 24 1 0 21 1 0 25 1 0 18 1 0 26 1 0 20 1 0 27 1 0 9 -1 0 
+7 : 0 2 1 0 4 -1 0 3 -1 0 8 -1 0 1 -1 0 14 1 0 13 1 0 18 1 0 12 1 0 
+
+RANKING
+1 : 2 5 4 7
+4 : 3 6 1 7
+2 : 1 5
+3 : 4 6
+5 :
+6 :
+7 :
+
+// Comprovem que la retallada del 4 s'ha realitzat correctament
+ORGANISMOS
+4 : 0 4 -1 0 2 1 0 5 -1 0 1 -1 0 6 1 0 3 1 0 7 -1 0 
+
+// S'emparellen els organismes 1 i 5, que són compatibles i generen el fill 8.
+// També es produeixen les parelles 2-6 i 3-7, però no són compatibles
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+ORGANISMOS
+1 : 0 2 -1 0 5 -1 0 4 -1 0 3 -1 0 8 -1 0 10 -1 0 9 -1 0 1 -1 0 14 -1 0 17 -1 0 16 -1 0 13 -1 0 12 -1 0 
+2 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 47 1 0 5 1 0 41 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+3 : 0 21 1 0 17 1 0 22 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 23 1 0 20 1 0 24 1 0 9 -1 0 
+4 : 0 4 -1 0 2 1 0 5 -1 0 1 -1 0 6 1 0 3 1 0 7 -1 0 
+5 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 13 1 0 12 1 0 
+6 : 0 22 1 0 17 1 0 23 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 24 1 0 21 1 0 25 1 0 18 1 0 26 1 0 20 1 0 27 1 0 9 -1 0 
+7 : 0 2 1 0 4 -1 0 3 -1 0 8 -1 0 1 -1 0 14 1 0 13 1 0 18 1 0 12 1 0 
+8 : 0 2 1 0 3 1 0 8 1 0 9 1 0 18 1 0 19 1 0 20 1 0 1 1 0 24 1 0 23 1 0 22 1 0 21 1 0 14 1 0 13 1 0 12 1 0 
+
+RANKING
+1 : 2 5 4 7 5 8
+4 : 3 6 1 7
+2 : 1 5
+3 : 4 6
+5 : 1 8
+6 :
+7 :
+8 :
+
+// Comprovem que l'organisme 5 no s'ha estirat donat que ja s'havia retallat anteriorment
+ORGANISMOS
+5 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 13 1 0 12 1 0 
+
+// S'emparellen el 1 i el 6, que NO són compatibles
+// S'emparellen el 2 i el 5, que són compatibles i generen el fill 9
+// S'emparellen 3 i el 8, que NO són compatibles
+// S'emparellen el 4 i el 7, que són compatibles i generen el fill 10
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 2
+
+RANKING
+1 : 2 5 4 7 5 8
+4 : 3 6 1 7 7 10
+2 : 1 5 5 9
+5 : 1 8 2 9
+3 : 4 6
+7 : 4 10
+6 :
+8 :
+9 :
+10 :
+
+ORGANISMOS
+10 : 0 2 1 0 1 -1 0 6 1 0 3 1 0 
+4 : 0 2 1 0 1 -1 0 3 1 0 
+
+ORGANISMOS
+4 : 0 
+
+// S'emparellen el 1 i el 7, que són compatibles i generen el fill 11
+// S'emparellen el 2 i el 8, que són compatibles i generen el fill 12
+// S'emparellen el 3 i el 5, que NO són compatibles
+// S'emparellen el 6 i el 9, que NO són compatibles
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 2
+
+RANKING
+1 : 2 5 4 7 5 8 7 11
+2 : 1 5 5 9 8 12
+4 : 3 6 1 7 7 10
+5 : 1 8 2 9
+7 : 4 10 1 11
+3 : 4 6
+8 : 2 12
+6 :
+9 :
+10 :
+11 :
+12 :
+
+// S'emparellen el 1 i el 8, que són compatibles i generen el fill 13
+// S'emparellen el 2 i el 7, que són compatibles i generen el fill 14
+// S'emparellen el 3 i el 6, que són compatibles i generen el fill 15
+// S'emparellen el 5 i el 9, que són compatibles i generen el fill 16
+// S'emparellen el 10 i el 11, que són compatibles i generen el fill 17
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 5
+
+
+RANKING
+1 : 2 5 4 7 5 8 7 11 8 13
+2 : 1 5 5 9 8 12 7 14
+4 : 3 6 1 7 7 10
+5 : 1 8 2 9 9 16
+7 : 4 10 1 11 2 14
+3 : 4 6 6 15
+8 : 2 12 1 13
+6 : 3 15
+9 : 5 16
+10 : 11 17
+11 : 10 17
+12 :
+13 :
+14 :
+15 :
+16 :
+17 :
+
+ORGANISMOS
+1 : 0 2 -1 0 5 -1 0 4 -1 0 3 -1 0 8 -1 0 10 -1 0 9 -1 0 1 -1 0 14 -1 0 17 -1 0 16 -1 0 13 -1 0 12 -1 0 
+2 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 47 1 0 5 1 0 41 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+3 : 0 21 1 0 17 1 0 22 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 18 -1 0 23 1 0 20 1 0 24 1 0 9 -1 0 
+4 : 0 
+5 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 13 1 0 12 1 0 
+6 : 0 22 1 0 17 1 0 23 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 24 1 0 21 1 0 25 1 0 18 1 0 26 1 0 20 1 0 27 1 0 9 -1 0 
+7 : 0 2 1 0 19 -1 0 4 -1 0 20 -1 0 3 -1 0 21 -1 0 8 -1 0 22 -1 0 1 -1 0 23 1 0 14 1 0 24 1 0 13 1 0 25 1 0 18 1 0 26 1 0 12 1 0 
+8 : 0 2 1 0 3 1 0 8 1 0 9 1 0 18 1 0 19 1 0 25 1 0 20 1 0 26 1 0 1 1 0 27 1 0 24 1 0 28 1 0 23 1 0 22 1 0 21 1 0 14 1 0 13 1 0 12 1 0 
+9 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 47 1 0 5 1 0 41 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+10 : 0 1 -1 0 3 1 0 
+11 : 0 2 1 0 3 -1 0 1 -1 0 13 1 0 12 1 0 
+12 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 5 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+13 : 0 2 1 0 3 1 0 8 1 0 9 1 0 18 1 0 19 1 0 21 1 0 20 1 0 22 1 0 1 1 0 27 1 0 26 1 0 28 1 0 25 1 0 24 1 0 23 1 0 14 1 0 13 1 0 12 1 0 
+14 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 47 1 0 5 1 0 41 1 0 33 1 0 66 1 0 55 1 0 12 1 0 71 1 0 21 1 0 73 1 0 72 1 0 74 1 0 2 1 0 
+15 : 0 21 1 0 17 1 0 22 1 0 10 -1 0 8 -1 0 7 1 0 2 -1 0 26 1 0 25 1 0 27 1 0 18 1 0 23 1 0 20 1 0 24 1 0 9 -1 0 
+16 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 13 1 0 12 1 0 
+17 : 0 4 1 0 1 -1 0 5 1 0 3 1 0 
+
+// S'emparellen el 1 i el 9, que són compatibles i generen el fill 18
+// S'emparellen el 2 i el 10, que NO són compatibles
+// S'emparellen el 3 i el 11, que NO són compatibles
+// S'emparellen el 5 i el 7, que són compatibles i generen el fill 19
+// S'emparellen el 6 i el 8, que NO són compatibles
+// S'emparellen el 12 i el 13, que són compatibles i generen el fill 20
+// La ronda acaba perquè s'ha arribat al nº màxim d'organismes, i per tant és una ronda
+// incompleta donat que encara quedaven organismes per emparellar
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 3
+
+FIN
+
+Organismos en total : 20
+Organismos vivos : 19 // Hem matat l'organisme 4
+
+// S'escriuen els organismes que han nascut en l'última ronda
+ORGANISMOS
+18 : 0 2 1 0 3 1 0 8 1 0 9 1 0 18 1 0 19 1 0 20 1 0 1 1 0 24 1 0 23 1 0 22 1 0 21 1 0 14 1 0 13 1 0 12 1 0 
+19 : 0 2 1 0 3 1 0 8 1 0 9 1 0 26 1 0 27 1 0 29 1 0 1 1 0 33 1 0 32 1 0 31 1 0 15 1 0 14 1 0 34 1 0 13 1 0 36 1 0 35 1 0 37 1 0 12 1 0 
+20 : 0 70 1 0 10 1 0 23 1 0 25 1 0 17 1 0 32 1 0 72 1 0 71 1 0 73 1 0 5 1 0 75 1 0 74 1 0 76 1 0 33 1 0 66 1 0 55 1 0 12 1 0 21 1 0 2 1 0 
+
+RANKING
+1 : 2 5 4 7 5 8 7 11 8 13 9 18
+2 : 1 5 5 9 8 12 7 14
+5 : 1 8 2 9 9 16 7 19
+7 : 4 10 1 11 2 14 5 19
+4 : 3 6 1 7 7 10
+3 : 4 6 6 15
+8 : 2 12 1 13
+9 : 5 16 1 18
+6 : 3 15
+10 : 11 17
+11 : 10 17
+12 : 13 20
+13 : 12 20
+14 :
+15 :
+16 :
+17 :
+18 :
+19 :
+20 :
+

@@ -1,0 +1,50 @@
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 2
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 2
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 3
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 4
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 6
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 9
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 12
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 18
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 27
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 40
+
+FIN
+
+Organismos en total : 130
+Organismos vivos : 121
+

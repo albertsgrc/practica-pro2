@@ -1,0 +1,845 @@
+\hypertarget{class_organisme}{\section{Referència de la Classe Organisme}
+\label{class_organisme}\index{Organisme@{Organisme}}
+}
+
+
+Representa un organisme de l'experiment. Es caracteritza per tenir un identificador que l'identifica unívocament i un arbre que representa la seva morfologia.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_organisme_a5624eb8adf14bc96d783067d51605fbd}{Organisme} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. S'executa automàticament al declarar un \hyperlink{class_organisme}{Organisme}. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_a96d8ba5ebd0a28819879b0f9371a8aef}{reproduir\-\_\-parella} (\hyperlink{class_organisme}{Organisme} \&escollit, \hyperlink{class_organisme}{Organisme} \&fill, bool \&compatibles)
+\begin{DoxyCompactList}\small\item\em Operació de reproducció entre organismes. \end{DoxyCompactList}\item 
+\hyperlink{class_organisme_a55c9d7cbc9683970ad88455fdc3be7aa}{$\sim$\-Organisme} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_abe3c4923cc5641e48724312bc298c8a9}{es\-\_\-mort} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de l'estat vital d'un organisme. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_a5ab6abd54070a56ceee9774b63ad041e}{escriure\-\_\-organisme} ()
+\begin{DoxyCompactList}\small\item\em Operació d'escriptura d'un organisme. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_ae580c3261f7dd221e1c5a6bd887a22f2}{esta\-\_\-retallat} () const 
+\begin{DoxyCompactList}\small\item\em Consultora que indica si un organisme ha patit una retallada. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_ab2ce3d76f757040f0c4acfedfada5561}{aplicar\-\_\-retallada} ()
+\begin{DoxyCompactList}\small\item\em Operació de retallada d'un organisme. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_ac5e67e65649b3254de9503bd126ecffa}{aplicar\-\_\-estirament} ()
+\begin{DoxyCompactList}\small\item\em Operació d'estirament d'un \hyperlink{class_organisme}{Organisme}. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_a056a9402130c7081b608838ba9ef2a30}{llegir\-\_\-organisme} ()
+\begin{DoxyCompactList}\small\item\em Operació de lectura d'un organisme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipus Privats}
+\begin{DoxyCompactItemize}
+\item 
+typedef Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel}
+\end{DoxyCompactItemize}
+\subsection*{Mètodes Privats Estàtics}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_organisme_a06ba17d1b6850dd79d743cbe6bca429f}{llegir\-\_\-acel} (\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&a, int \&\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax})
+\begin{DoxyCompactList}\small\item\em Acció de lectura d'un arbre de cèl·lules. \end{DoxyCompactList}\item 
+static void \hyperlink{class_organisme_a18593921b9bf3ca9730ea8125c550b3c}{escriure\-\_\-acel} (\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&a)
+\begin{DoxyCompactList}\small\item\em Acció d'escriptura d'un arbre de cèl·lules. \end{DoxyCompactList}\item 
+static void \hyperlink{class_organisme_a936b89cb20fc7d638d9b232828cf1e49}{retallar\-\_\-acel} (\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&a, int \&\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax})
+\begin{DoxyCompactList}\small\item\em Acció de retallada d'un arbre de cèl·lules. \end{DoxyCompactList}\item 
+static void \hyperlink{class_organisme_a368d38216a2768978f4b8c2123b84aa1}{estirar\-\_\-acel} (\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&a, int \&\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax})
+\begin{DoxyCompactList}\small\item\em Acció d'estirament d'un arbre de cèl·lules. \end{DoxyCompactList}\item 
+static void \hyperlink{class_organisme_a8b9eaa46043031bbc5cb0c4aa3226b66}{crear\-\_\-fill} (\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&x1, \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&x2, \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&fill, int \&idclonsx2, int \&idmaxf, int \&tamint, int \&stams)
+\begin{DoxyCompactList}\small\item\em Acció de creació de l'Arbre del fill i obtenció d'informació de la compatibilitat d'una parella d'arbres associats a organismes. \end{DoxyCompactList}\item 
+static void \hyperlink{class_organisme_ac7d5375d049b554778f5b2769618160d}{aux\-\_\-clons\-\_\-x1} (\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&x1, \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&fill, int \&tam, int \&idmaxf)
+\begin{DoxyCompactList}\small\item\em Acció auxiliar que col·loca els clons d'un subarbre de l'arbre de l'organisme que escull a un altre per reproduir-\/se. \end{DoxyCompactList}\item 
+static void \hyperlink{class_organisme_ab6232adf26f92b75902f25fccdd91a13}{aux\-\_\-clons\-\_\-x2} (\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&x2, \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \&fill, int \&tam, int \&idmaxf, int \&idclonsx2)
+\begin{DoxyCompactList}\small\item\em Acció auxiliar que col·loca els clons d'un subarbre de l'arbre de l'organisme que és escollit per un altre per reproduir-\/se. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} \hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}
+\begin{DoxyCompactList}\small\item\em Representa la morfologia de l'organisme, és a dir, les cèl·lules que el conformen i les relacions existents entre elles. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_acf912225a83570cb68542dcc6709023a}{retallat}
+\begin{DoxyCompactList}\small\item\em Indica si l'organisme ha patit una retallada. \end{DoxyCompactList}\item 
+int \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax}
+\begin{DoxyCompactList}\small\item\em Conté en tot moment l'identificador de la cèl·lula amb id de màxim valor de l'organisme. Si l'organisme és mort el seu valor és 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Representa un organisme de l'experiment. Es caracteritza per tenir un identificador que l'identifica unívocament i un arbre que representa la seva morfologia. 
+
+Definició a la línia 17 del fitxer Organisme.\-hpp.
+
+
+
+\subsection{Documentació de les Definicions de Tipus Membre}
+\hypertarget{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{\index{Organisme@{Organisme}!Acel@{Acel}}
+\index{Acel@{Acel}!Organisme@{Organisme}}
+\subsubsection[{Acel}]{\setlength{\rightskip}{0pt plus 5cm}typedef Arbre$<${\bf Celula}$>$ {\bf Organisme\-::\-Acel}\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}
+
+
+Definició a la línia 110 del fitxer Organisme.\-hpp.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\hypertarget{class_organisme_a5624eb8adf14bc96d783067d51605fbd}{\index{Organisme@{Organisme}!Organisme@{Organisme}}
+\index{Organisme@{Organisme}!Organisme@{Organisme}}
+\subsubsection[{Organisme}]{\setlength{\rightskip}{0pt plus 5cm}Organisme\-::\-Organisme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_a5624eb8adf14bc96d783067d51605fbd}
+
+
+Creadora per defecte. S'executa automàticament al declarar un \hyperlink{class_organisme}{Organisme}. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és un \hyperlink{class_organisme}{Organisme} mort 
+\end{DoxyPostcond}
+
+
+Definició a la línia 159 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+159                      \{
+160     \hyperlink{class_organisme_acf912225a83570cb68542dcc6709023a}{retallat} = \textcolor{keyword}{false};
+161     \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax} = 0;
+162 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a55c9d7cbc9683970ad88455fdc3be7aa}{\index{Organisme@{Organisme}!$\sim$\-Organisme@{$\sim$\-Organisme}}
+\index{$\sim$\-Organisme@{$\sim$\-Organisme}!Organisme@{Organisme}}
+\subsubsection[{$\sim$\-Organisme}]{\setlength{\rightskip}{0pt plus 5cm}Organisme\-::$\sim$\-Organisme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_a55c9d7cbc9683970ad88455fdc3be7aa}
+
+
+Destructora per defecte. 
+
+
+
+Definició a la línia 181 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+181 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\hypertarget{class_organisme_a96d8ba5ebd0a28819879b0f9371a8aef}{\index{Organisme@{Organisme}!reproduir\-\_\-parella@{reproduir\-\_\-parella}}
+\index{reproduir\-\_\-parella@{reproduir\-\_\-parella}!Organisme@{Organisme}}
+\subsubsection[{reproduir\-\_\-parella}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::reproduir\-\_\-parella (
+\begin{DoxyParamCaption}
+\item[{{\bf Organisme} \&}]{escollit, }
+\item[{{\bf Organisme} \&}]{fill, }
+\item[{bool \&}]{compatibles}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_a96d8ba5ebd0a28819879b0f9371a8aef}
+
+
+Operació de reproducció entre organismes. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt out}  & {\em fill} & Paràmetre de sortida en el que es guardarà el fill resultant de la reproducció en cas de que els organismes siguin compatibles. \\
+\hline
+\mbox{\tt in}  & {\em escollit} & Paràmetre d'entrada que conté l'organisme escollit pel paràmetre implícit per a reproduir-\/se. \\
+\hline
+\mbox{\tt out}  & {\em compatibles} & Paràmetre de sortida que indica si el paràmetre implícit i {\ttfamily escollit} són compatibles. (i.\-e la reproducció ha donat lloc a un fill). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+
+\begin{DoxyItemize}
+\item El paràmetre implícit i {\ttfamily escollit} són organismes vius. 
+\item {\ttfamily fill} és un \hyperlink{class_organisme}{Organisme} mort.
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item El paràmetre implícit i {\ttfamily escollit} no s'han modificat
+\item {\ttfamily fill} és l'\hyperlink{class_organisme}{Organisme} resultant de la reproducció del paràmetre implícit i {\ttfamily escollit} si {\ttfamily compatible} és cert. Si {\ttfamily compatible} és fals {\ttfamily fill} és un organisme mort i no existent (no s'ha modificat)
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 164 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+165                                                                         \{
+166     \textcolor{keywordtype}{int} auxidmax = \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax};
+167     \textcolor{keywordtype}{int} stams = 0;
+168     \textcolor{keywordtype}{int} tamint = 0;
+169     \hyperlink{class_organisme_a8b9eaa46043031bbc5cb0c4aa3226b66}{crear\_fill}(\hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}, escollit.\hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}, fill.
+      \hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia},
+170                auxidmax, fill.\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax}, tamint, stams);
+171     compatibles = tamint >= (stams)/4;
+172     \textcolor{keywordflow}{if} (not compatibles) \{
+173         \textcolor{comment}{// Si no son compatibles destruim el fill}
+174         fill.\hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}.a\_buit();
+175         fill.\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax} = 0;
+176     \}
+177 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_abe3c4923cc5641e48724312bc298c8a9}{\index{Organisme@{Organisme}!es\-\_\-mort@{es\-\_\-mort}}
+\index{es\-\_\-mort@{es\-\_\-mort}!Organisme@{Organisme}}
+\subsubsection[{es\-\_\-mort}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::es\-\_\-mort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organisme_abe3c4923cc5641e48724312bc298c8a9}
+
+
+Consultora de l'estat vital d'un organisme. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si el paràmetre implícit és mort 
+\end{DoxyPostcond}
+
+
+Definició a la línia 185 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+185                               \{
+186     \textcolor{keywordflow}{return} \hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}.es\_buit();
+187 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a5ab6abd54070a56ceee9774b63ad041e}{\index{Organisme@{Organisme}!escriure\-\_\-organisme@{escriure\-\_\-organisme}}
+\index{escriure\-\_\-organisme@{escriure\-\_\-organisme}!Organisme@{Organisme}}
+\subsubsection[{escriure\-\_\-organisme}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::escriure\-\_\-organisme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_a5ab6abd54070a56ceee9774b63ad041e}
+
+
+Operació d'escriptura d'un organisme. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item S'ha escrit la morfologia del paràmetre implícit pel canal estàndard de sortida.
+\item El paràmetre implícit no s'ha modificat.
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 189 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+189                                    \{
+190     \hyperlink{class_organisme_a18593921b9bf3ca9730ea8125c550b3c}{escriure\_acel}(\hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia});
+191     cout << endl;
+192 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_ae580c3261f7dd221e1c5a6bd887a22f2}{\index{Organisme@{Organisme}!esta\-\_\-retallat@{esta\-\_\-retallat}}
+\index{esta\-\_\-retallat@{esta\-\_\-retallat}!Organisme@{Organisme}}
+\subsubsection[{esta\-\_\-retallat}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::esta\-\_\-retallat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organisme_ae580c3261f7dd221e1c5a6bd887a22f2}
+
+
+Consultora que indica si un organisme ha patit una retallada. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si el paràmetre implícit ha sigut retallat algun cop desde la seva creació. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 194 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+194                                     \{
+195     \textcolor{keywordflow}{return} \hyperlink{class_organisme_acf912225a83570cb68542dcc6709023a}{retallat};
+196 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_ab2ce3d76f757040f0c4acfedfada5561}{\index{Organisme@{Organisme}!aplicar\-\_\-retallada@{aplicar\-\_\-retallada}}
+\index{aplicar\-\_\-retallada@{aplicar\-\_\-retallada}!Organisme@{Organisme}}
+\subsubsection[{aplicar\-\_\-retallada}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::aplicar\-\_\-retallada (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_ab2ce3d76f757040f0c4acfedfada5561}
+
+
+Operació de retallada d'un organisme. 
+
+\begin{DoxyPrecond}{Precondició}
+El paràmetre implícit no està mort 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El paràmetre implícit ha patit una retallada 
+\end{DoxyPostcond}
+
+
+Definició a la línia 200 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+200                                   \{
+201     \hyperlink{class_organisme_acf912225a83570cb68542dcc6709023a}{retallat} = \textcolor{keyword}{true};
+202     \textcolor{comment}{// Variable auxiliar en la que obtindrem el nou id max. despres de retallar}
+203     \textcolor{keywordtype}{int} auxidmax = 0;
+204     \hyperlink{class_organisme_a936b89cb20fc7d638d9b232828cf1e49}{retallar\_acel}(\hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}, auxidmax);
+205     \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax} = auxidmax; \textcolor{comment}{// Actualitzem idmax}
+206 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_ac5e67e65649b3254de9503bd126ecffa}{\index{Organisme@{Organisme}!aplicar\-\_\-estirament@{aplicar\-\_\-estirament}}
+\index{aplicar\-\_\-estirament@{aplicar\-\_\-estirament}!Organisme@{Organisme}}
+\subsubsection[{aplicar\-\_\-estirament}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::aplicar\-\_\-estirament (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_ac5e67e65649b3254de9503bd126ecffa}
+
+
+Operació d'estirament d'un \hyperlink{class_organisme}{Organisme}. 
+
+\begin{DoxyPrecond}{Precondició}
+El paràmetre implícit no està mort 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El paràmetre implícit ha patit un estirament 
+\end{DoxyPostcond}
+
+
+Definició a la línia 208 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+208                                    \{
+209     \hyperlink{class_organisme_a368d38216a2768978f4b8c2123b84aa1}{estirar\_acel}(\hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+210 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a056a9402130c7081b608838ba9ef2a30}{\index{Organisme@{Organisme}!llegir\-\_\-organisme@{llegir\-\_\-organisme}}
+\index{llegir\-\_\-organisme@{llegir\-\_\-organisme}!Organisme@{Organisme}}
+\subsubsection[{llegir\-\_\-organisme}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::llegir\-\_\-organisme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_a056a9402130c7081b608838ba9ef2a30}
+
+
+Operació de lectura d'un organisme. 
+
+\begin{DoxyPrecond}{Precondició}
+El paràmetre implícit no està mort 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha llegit el paràmetre implícit pel canal estàndard d'entrada 
+\end{DoxyPostcond}
+
+
+Definició a la línia 212 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+212                                  \{
+213     \hyperlink{class_organisme_a06ba17d1b6850dd79d743cbe6bca429f}{llegir\_acel}(\hyperlink{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{morfologia}, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+214 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a06ba17d1b6850dd79d743cbe6bca429f}{\index{Organisme@{Organisme}!llegir\-\_\-acel@{llegir\-\_\-acel}}
+\index{llegir\-\_\-acel@{llegir\-\_\-acel}!Organisme@{Organisme}}
+\subsubsection[{llegir\-\_\-acel}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::llegir\-\_\-acel (
+\begin{DoxyParamCaption}
+\item[{{\bf Acel} \&}]{a, }
+\item[{int \&}]{idmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organisme_a06ba17d1b6850dd79d743cbe6bca429f}
+
+
+Acció de lectura d'un arbre de cèl·lules. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt out}  & {\em a} & Arbre de cèl·lules a llegir \\
+\hline
+\mbox{\tt out}  & {\em idmax} & Paràmetre de sortida on es guardarà l'identificador màxim de l'organisme un cop llegit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily a} és buit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+{\ttfamily a} és l'arbre de cèl·lules llegit pel canal estàndard d'entrada en format {\bfseries preordre}, {\ttfamily idmax} conté l'identificador de màxim valor de totes les cèl·lules d'{\ttfamily a} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 10 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+10                                              \{
+11     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} a1, a2;
+12     \hyperlink{class_celula}{Celula} c;
+13     c.\hyperlink{class_celula_a8b78a83ccbaa5be1cea1ffd47972279c}{llegir\_celula}();
+14     \textcolor{keywordflow}{if} (not c.\hyperlink{class_celula_a0d5c352e0b5c3187767dbcef413b51a9}{es\_buida}()) \{
+15         \textcolor{comment}{// Si no es una celula buida llegim els dos subarbres,}
+16         \textcolor{comment}{// recalculem l'identificador maxim i plantem}
+17         \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax} = max(\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax}, c.\hyperlink{class_celula_a521825572a84119f433c77e5707aadd6}{consul\_id}());
+18         \hyperlink{class_organisme_a06ba17d1b6850dd79d743cbe6bca429f}{llegir\_acel}(a1, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+19         \hyperlink{class_organisme_a06ba17d1b6850dd79d743cbe6bca429f}{llegir\_acel}(a2, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+20         a.plantar(c, a1, a2);
+21     \}
+22 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a18593921b9bf3ca9730ea8125c550b3c}{\index{Organisme@{Organisme}!escriure\-\_\-acel@{escriure\-\_\-acel}}
+\index{escriure\-\_\-acel@{escriure\-\_\-acel}!Organisme@{Organisme}}
+\subsubsection[{escriure\-\_\-acel}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::escriure\-\_\-acel (
+\begin{DoxyParamCaption}
+\item[{{\bf Acel} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organisme_a18593921b9bf3ca9730ea8125c550b3c}
+
+
+Acció d'escriptura d'un arbre de cèl·lules. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in}  & {\em a} & Arbre de cèl·lules a escriure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily a} no s'ha modificat
+\item S'ha escrit {\ttfamily a} pel canal estàndard de sortida en format {\bfseries inordre}, amb els identificadors de les cèl·lules acompanyats d'un {\itshape 1} si són actives i un {\itshape -\/1} si són passives 
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 24 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+24                                     \{
+25     \textcolor{keywordflow}{if} (not a.es\_buit()) \{
+26         \hyperlink{class_celula}{Celula} c = a.arrel();
+27         \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} a1, a2;
+28         a.fills(a1, a2);
+29         \hyperlink{class_organisme_a18593921b9bf3ca9730ea8125c550b3c}{escriure\_acel}(a1);
+30         c.\hyperlink{class_celula_a75b2519d8063e841dea7b9d6fd1506ab}{escriure\_celula}();
+31         \hyperlink{class_organisme_a18593921b9bf3ca9730ea8125c550b3c}{escriure\_acel}(a2);
+32         \textcolor{comment}{// Replantem per tal que l'arbre quedi inalterat}
+33         a.plantar(c, a1, a2);
+34     \}
+35     \textcolor{keywordflow}{else} cout << 0 << \textcolor{charliteral}{' '};
+36 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a936b89cb20fc7d638d9b232828cf1e49}{\index{Organisme@{Organisme}!retallar\-\_\-acel@{retallar\-\_\-acel}}
+\index{retallar\-\_\-acel@{retallar\-\_\-acel}!Organisme@{Organisme}}
+\subsubsection[{retallar\-\_\-acel}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::retallar\-\_\-acel (
+\begin{DoxyParamCaption}
+\item[{{\bf Acel} \&}]{a, }
+\item[{int \&}]{idmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organisme_a936b89cb20fc7d638d9b232828cf1e49}
+
+
+Acció de retallada d'un arbre de cèl·lules. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in,out}  & {\em a} & Arbre de cèl·lules a retallar. \\
+\hline
+\mbox{\tt out}  & {\em idmax} & Paràmetre de sortida on es guardarà l'identificador màxim de l'arbre després de la retallada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily } 
+\begin{DoxyItemize}
+\item {\ttfamily a} és no buit
+\item {\ttfamily idmax} = 0 
+\item {\ttfamily a=A} 
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily a} és l'arbre resultant d'eliminar totes les fulles d'A
+\item {\ttfamily Si} {\ttfamily a} és no buit idmax és l'identificador màxim d'entre totes les cèl·lules d'{\ttfamily a}, altrament {\ttfamily idmax} val 0
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 38 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+38                                                \{
+39     \hyperlink{class_celula}{Celula} c = a.arrel();
+40     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fe, fd;
+41     a.fills(fe, fd);
+42     \textcolor{comment}{/* Si algun dels dos subarbres es no buit aleshores no cal retallar}
+43 \textcolor{comment}{     * (la cel·lula ja s'ha fisionat) */}
+44     \textcolor{keywordflow}{if} (not fe.es\_buit() or not fd.es\_buit()) \{
+45         \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organisme_a936b89cb20fc7d638d9b232828cf1e49}{retallar\_acel}(fe, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+46         \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organisme_a936b89cb20fc7d638d9b232828cf1e49}{retallar\_acel}(fd, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+47         a.plantar(c, fe, fd);
+48         \textcolor{comment}{// Recalculem l'identificador maxim}
+49         \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax} = max(\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax}, c.\hyperlink{class_celula_a521825572a84119f433c77e5707aadd6}{consul\_id}());
+50     \}
+51     \textcolor{comment}{// Altrament es retalla simplement no replantant}
+52 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a368d38216a2768978f4b8c2123b84aa1}{\index{Organisme@{Organisme}!estirar\-\_\-acel@{estirar\-\_\-acel}}
+\index{estirar\-\_\-acel@{estirar\-\_\-acel}!Organisme@{Organisme}}
+\subsubsection[{estirar\-\_\-acel}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::estirar\-\_\-acel (
+\begin{DoxyParamCaption}
+\item[{{\bf Acel} \&}]{a, }
+\item[{int \&}]{idmax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organisme_a368d38216a2768978f4b8c2123b84aa1}
+
+
+Acció d'estirament d'un arbre de cèl·lules. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in,out}  & {\em a} & Arbre de cèl·lules a estirar \\
+\hline
+\mbox{\tt in,out}  & {\em idmax} & Paràmetre d'entrada/sortida que val en tot moment l'identificador màxim de totes les cèl·lules d'{\ttfamily a} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily a=A} 
+\item {\ttfamily idmax} conté l'identificador màxim de totes les cèl·lules d'{\ttfamily a} 
+\item {\ttfamily a} és no buit
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily a} és el resultat d'afegir dues cèl·lules filles a totes les fulles d'{\ttfamily A}, amb valors d'identificadors a partir del següent al màxim identificador d'A assignats correlativament d'esquerra a dreta en l'arbre, i amb activitat o passivitat heredada de la corresponent fulla mare en A 
+\item {\ttfamily idmax} conté l'identificador màxim de totes les cèl·lules d'{\ttfamily a} 
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 54 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+54                                               \{
+55     \hyperlink{class_celula}{Celula} c = a.arrel();
+56     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fe, fd;
+57     a.fills(fe, fd);
+58     \textcolor{keywordflow}{if} (fe.es\_buit() and fd.es\_buit()) \{
+59         ++\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax};
+60         \hyperlink{class_celula}{Celula} f1(\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax}, c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}());
+61         \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fbuit1;
+62         fe.plantar(f1, fbuit1, fbuit1);
+63         ++\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax};
+64         \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fbuit2;
+65         \hyperlink{class_celula}{Celula} f2(\hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax}, c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}());
+66         fd.plantar(f2, fbuit2, fbuit2);
+67     \}
+68     \textcolor{keywordflow}{else} \{
+69         \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organisme_a368d38216a2768978f4b8c2123b84aa1}{estirar\_acel}(fe, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+70         \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organisme_a368d38216a2768978f4b8c2123b84aa1}{estirar\_acel}(fd, \hyperlink{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{idmax});
+71     \}
+72     a.plantar(c, fe, fd);
+73 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_a8b9eaa46043031bbc5cb0c4aa3226b66}{\index{Organisme@{Organisme}!crear\-\_\-fill@{crear\-\_\-fill}}
+\index{crear\-\_\-fill@{crear\-\_\-fill}!Organisme@{Organisme}}
+\subsubsection[{crear\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::crear\-\_\-fill (
+\begin{DoxyParamCaption}
+\item[{{\bf Acel} \&}]{x1, }
+\item[{{\bf Acel} \&}]{x2, }
+\item[{{\bf Acel} \&}]{fill, }
+\item[{int \&}]{idclonsx2, }
+\item[{int \&}]{idmaxf, }
+\item[{int \&}]{tamint, }
+\item[{int \&}]{stams}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organisme_a8b9eaa46043031bbc5cb0c4aa3226b66}
+
+
+Acció de creació de l'Arbre del fill i obtenció d'informació de la compatibilitat d'una parella d'arbres associats a organismes. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in}  & {\em x1} & Arbre de l'\hyperlink{class_organisme}{Organisme} que escull a {\ttfamily x2} per a reproduir-\/se \\
+\hline
+\mbox{\tt in}  & {\em x2} & Arbre de l'\hyperlink{class_organisme}{Organisme} escollit per {\ttfamily x1} per a reproduir-\/se \\
+\hline
+\mbox{\tt out}  & {\em fill} & Arbre de l'\hyperlink{class_organisme}{Organisme} resultant de la reproducció d'{\ttfamily x1} amb {\ttfamily x2} \\
+\hline
+\mbox{\tt in,out}  & {\em idclonsx2} & Identificador que s'utilitzarà per assignar als clons de cèl·lules de l'arbre {\ttfamily x2}, inicialment coinicident amb l'identificador màxim de l'arbre {\ttfamily x1} \\
+\hline
+\mbox{\tt out}  & {\em idmaxf} & Paràmetre de sortida on es guardarà el valor de l'identificador màxim del fill \\
+\hline
+\mbox{\tt out}  & {\em tamint} & Paràmetre de sortida on es guardarà el valor del tamany de la intersecció dels arbres {\ttfamily x1} i {\ttfamily x2} \\
+\hline
+\mbox{\tt out}  & {\em stams} & Paràmetre de sortida on es guardarà el valor de la suma de tamanys dels arbres {\ttfamily x1} i {\ttfamily x2} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily x1} i {\ttfamily x2} són no buits
+\item {\ttfamily fill} és buit 
+\item {\ttfamily idmaxf} = {\ttfamily tamint} = {\ttfamily tamx1} = {\ttfamily tamx2} = 0 
+\item {\ttfamily idclonsx2} coincideix amb l'identificador màxim de totes les cèl·lules d'{\ttfamily x1} 
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily x1} i {\ttfamily x2} no s'han modificat 
+\item {\ttfamily fill} és l'arbre de l'\hyperlink{class_organisme}{Organisme} resultant de la reproducció dels organismes els arbres dels quals són {\ttfamily x1} i {\ttfamily x2} 
+\item {\ttfamily idclonsx2} conté l'identificador màxim d'{\ttfamily x1} si no s'ha plantat cap clon d'{\ttfamily x2}, altrament conté l'identificador de l'últim clon plantat d'{\ttfamily x2} 
+\item {\ttfamily idmaxf} conté l'identificador màxim de {\ttfamily fill} 
+\item {\ttfamily tamint} conté el tamany de l'intersecció de {\ttfamily x1} i {\ttfamily x2} 
+\item {\ttfamily stams} conté la suma dels tamanys dels arbres {\ttfamily x1} i {\ttfamily x2} (nombre de nodes) 
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 120 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+121                                                               \{
+122     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fe1, fd1, fe2, fd2;
+123     \hyperlink{class_celula}{Celula} c1(x1.arrel());
+124     \hyperlink{class_celula}{Celula} c2(x2.arrel());
+125     x1.fills(fe1, fd1);
+126     x2.fills(fe2, fd2);
+127     ++tamint;
+128     stams += 2;
+129 
+130     \textcolor{comment}{/* Si els dos subarbres son no buits aleshores seguim en la interseccio,}
+131 \textcolor{comment}{     * sino haurem de mirar per separat els subarbres que no siguin buits}
+132 \textcolor{comment}{     * en una funcio auxiliar que es dedica a col·locar els clons */}
+133 
+134     \textcolor{comment}{// Subarbres esquerres}
+135     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fef;
+136     \textcolor{keywordflow}{if} (not fe1.es\_buit() and not fe2.es\_buit()) \{
+137         \hyperlink{class_organisme_a8b9eaa46043031bbc5cb0c4aa3226b66}{crear\_fill}(fe1, fe2, fef, idclonsx2, idmaxf, tamint, stams);
+138     \}
+139     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fe1.es\_buit()) \hyperlink{class_organisme_ac7d5375d049b554778f5b2769618160d}{aux\_clons\_x1}(fe1, fef, stams, idmaxf);
+140     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fe2.es\_buit()) \hyperlink{class_organisme_ab6232adf26f92b75902f25fccdd91a13}{aux\_clons\_x2}(fe2, fef, stams, idmaxf, idclonsx2);
+141     \textcolor{comment}{// Subarbres drets}
+142     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fdf;
+143     \textcolor{keywordflow}{if} (not fd1.es\_buit() and not fd2.es\_buit()) \{
+144         \hyperlink{class_organisme_a8b9eaa46043031bbc5cb0c4aa3226b66}{crear\_fill}(fd1, fd2, fdf, idclonsx2, idmaxf, tamint, stams);
+145     \}
+146     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fd1.es\_buit()) \hyperlink{class_organisme_ac7d5375d049b554778f5b2769618160d}{aux\_clons\_x1}(fd1, fdf, stams, idmaxf);
+147     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not fd2.es\_buit()) \hyperlink{class_organisme_ab6232adf26f92b75902f25fccdd91a13}{aux\_clons\_x2}(fd2, fdf, stams, idmaxf, idclonsx2);
+148 
+149     fill.plantar(\hyperlink{class_celula}{Celula}(c1.consul\_id(), c1.es\_activa() or c2.es\_activa()), fef, fdf);
+150     idmaxf = max(idmaxf, c1.consul\_id());
+151     x1.plantar(c1, fe1, fd1);
+152     x2.plantar(c2, fe2, fd2);
+153 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_ac7d5375d049b554778f5b2769618160d}{\index{Organisme@{Organisme}!aux\-\_\-clons\-\_\-x1@{aux\-\_\-clons\-\_\-x1}}
+\index{aux\-\_\-clons\-\_\-x1@{aux\-\_\-clons\-\_\-x1}!Organisme@{Organisme}}
+\subsubsection[{aux\-\_\-clons\-\_\-x1}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::aux\-\_\-clons\-\_\-x1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Acel} \&}]{x1, }
+\item[{{\bf Acel} \&}]{fill, }
+\item[{int \&}]{tam, }
+\item[{int \&}]{idmaxf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organisme_ac7d5375d049b554778f5b2769618160d}
+
+
+Acció auxiliar que col·loca els clons d'un subarbre de l'arbre de l'organisme que escull a un altre per reproduir-\/se. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in}  & {\em x1} & Subarbre de l'organisme les cèl·lules del qual es clonifiquen \\
+\hline
+\mbox{\tt in}  & {\em fill} & Subarbre del fill on es col·loquen les cèl·lules clonificades \\
+\hline
+\mbox{\tt in,out}  & {\em tam} & Nombre de nodes tractats dels arbres dels organismes que s'estàn reproduint \\
+\hline
+\mbox{\tt in,out}  & {\em idmaxf} & Identificador màxim de totes les cèl·lules de la part creada del fill (no es refereix al paràmetre d'aquesta funció, que de fet és un subarbre de la part de l'arbre del fill creada sinó a la part del fill creada, en la seva totalitat) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily x1} és no buit
+\item {\ttfamily fill} és buit 
+\item {\ttfamily fill=F\-I\-L\-L} 
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily x1} no s'ha modificat
+\item {\ttfamily tam} s'ha incrementat en el nombre de clons que s'hagin plantat 
+\item {\ttfamily fill} és el resultat d'afegir a F\-I\-L\-L els clons de les cèl·lules actives d'{\ttfamily x1} a més del mínim nombre de cèl·lules passives per tal que les actives no quedéssin desconectades, amb identificadors coincidents amb les corresponents cèl·lules d'{\ttfamily x1} 
+\item {\ttfamily idmaxf} s'ha actualitzat amb el màxim entre el seu valor inicial i el màxim d'entre tots els identificadors de les cèl·lules plantades al {\ttfamily fill} 
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 75 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+75                                                                     \{
+76     ++tam;
+77     \hyperlink{class_celula}{Celula} c = x1.arrel();
+78     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fe, fd;
+79     x1.fills(fe, fd);
+80 
+81     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fef;
+82     \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organisme_ac7d5375d049b554778f5b2769618160d}{aux\_clons\_x1}(fe, fef, tam, idmaxf);
+83     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fdf;
+84     \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organisme_ac7d5375d049b554778f5b2769618160d}{aux\_clons\_x1}(fd, fdf, tam, idmaxf);
+85     \textcolor{comment}{/* Si s'ha plantat alguna celula en alguna branca inferior o la celula}
+86 \textcolor{comment}{       es activa plantem al fill */}
+87     \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}() or not fef.es\_buit() or not fdf.es\_buit()) \{
+88         fill.plantar(c, fef, fdf);
+89         \textcolor{comment}{// Actualitzem l'id màxim del fill}
+90         idmaxf = max(idmaxf, c.\hyperlink{class_celula_a521825572a84119f433c77e5707aadd6}{consul\_id}());
+91     \}
+92     \textcolor{comment}{// Replantem per no destruir l'arbre de l'org que es reprodueix}
+93     x1.plantar(c, fe, fd);
+94 \}
+\end{DoxyCode}
+\hypertarget{class_organisme_ab6232adf26f92b75902f25fccdd91a13}{\index{Organisme@{Organisme}!aux\-\_\-clons\-\_\-x2@{aux\-\_\-clons\-\_\-x2}}
+\index{aux\-\_\-clons\-\_\-x2@{aux\-\_\-clons\-\_\-x2}!Organisme@{Organisme}}
+\subsubsection[{aux\-\_\-clons\-\_\-x2}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::aux\-\_\-clons\-\_\-x2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Acel} \&}]{x2, }
+\item[{{\bf Acel} \&}]{fill, }
+\item[{int \&}]{tam, }
+\item[{int \&}]{idmaxf, }
+\item[{int \&}]{idclonsx2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_organisme_ab6232adf26f92b75902f25fccdd91a13}
+
+
+Acció auxiliar que col·loca els clons d'un subarbre de l'arbre de l'organisme que és escollit per un altre per reproduir-\/se. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in}  & {\em x2} & Subarbre de l'organisme les cèl·lules del qual es clonifiquen \\
+\hline
+\mbox{\tt in,out}  & {\em fill} & Subarbre del fill on es col·loquen les cèl·lules clonificades \\
+\hline
+\mbox{\tt in,out}  & {\em tam} & Nombre de nodes tractats dels arbres dels organismes que s'estàn reproduint \\
+\hline
+\mbox{\tt in,out}  & {\em idmaxf} & Identificador màxim de totes les cèl·lules de la part creada del fill (no es refereix al paràmetre d'aquesta funció, que de fet és un subarbre de la part de l'arbre del fill creada sinó a la part del fill creada, en la seva totalitat) \\
+\hline
+\mbox{\tt in,out}  & {\em idclonsx2} & Conté l'indentificador de l'últim clon plantat, si no se n'ha plantat cap conté l'identificador màxim de l'arbre de l'\hyperlink{class_organisme}{Organisme} que ha escollit a l'\hyperlink{class_organisme}{Organisme} un subarbre del qual és {\ttfamily a} per reproduir-\/se \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily x2} és no buit
+\item {\ttfamily fill} és buit 
+\item fill=F\-I\-L\-L
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item {\ttfamily x2} no s'ha modificat
+\item {\ttfamily tam} s'ha incrementat en el nombre de clons que s'hagin plantat 
+\item {\ttfamily fill} és el resultat d'afegir a F\-I\-L\-L els clons de les cèl·lules actives d'{\ttfamily x2} a més del mínim nombre de cèl·lules passives per tal que les actives no quedéssin desconectades, amb identificadors assignats correlativament en preordre a partir del valor següent a {\ttfamily idclonsx2} 
+\item {\ttfamily idclonsx2} conté l'indentificador de l'últim clon plantat, si no se n'ha plantat cap el seu valor no s'ha modificat
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 96 del fitxer Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+97                                                         \{
+98     ++tam;
+99     \hyperlink{class_celula}{Celula} c = x2.arrel();
+100     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fe, fd;
+101     x2.fills(fe, fd);
+102     \textcolor{keywordtype}{int} idcel = idclonsx2 + 1;
+103     \textcolor{comment}{/* Les celules dels subarbres tindran identificadors}
+104 \textcolor{comment}{     * a partir de l'identificador que es planta en aquesta crida */}
+105     \textcolor{keywordtype}{int} idclonsx2prima = idcel;
+106 
+107     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fef;
+108     \textcolor{keywordflow}{if} (not fe.es\_buit()) \hyperlink{class_organisme_ab6232adf26f92b75902f25fccdd91a13}{aux\_clons\_x2}(fe, fef, tam, idmaxf, idclonsx2prima);
+109     \hyperlink{class_organisme_a6322ecf5313caa7df794a33c4fc58f4e}{Acel} fdf;
+110     \textcolor{keywordflow}{if} (not fd.es\_buit()) \hyperlink{class_organisme_ab6232adf26f92b75902f25fccdd91a13}{aux\_clons\_x2}(fd, fdf, tam, idmaxf, idclonsx2prima);
+111     \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}() or not fef.es\_buit() or not fdf.es\_buit()) \{
+112         fill.plantar(\hyperlink{class_celula}{Celula}(idcel, c.\hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\_activa}()), fef, fdf);
+113         idmaxf = max(idmaxf, idcel);
+114         idclonsx2 = idclonsx2prima;
+115     \}
+116 
+117     x2.plantar(c, fe, fd);
+118 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\hypertarget{class_organisme_a4f36183d9fb514405176208f7d3f6a96}{\index{Organisme@{Organisme}!morfologia@{morfologia}}
+\index{morfologia@{morfologia}!Organisme@{Organisme}}
+\subsubsection[{morfologia}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Acel} Organisme\-::morfologia\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a4f36183d9fb514405176208f7d3f6a96}
+
+
+Representa la morfologia de l'organisme, és a dir, les cèl·lules que el conformen i les relacions existents entre elles. 
+
+
+
+Definició a la línia 116 del fitxer Organisme.\-hpp.
+
+\hypertarget{class_organisme_acf912225a83570cb68542dcc6709023a}{\index{Organisme@{Organisme}!retallat@{retallat}}
+\index{retallat@{retallat}!Organisme@{Organisme}}
+\subsubsection[{retallat}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::retallat\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_acf912225a83570cb68542dcc6709023a}
+
+
+Indica si l'organisme ha patit una retallada. 
+
+
+
+Definició a la línia 118 del fitxer Organisme.\-hpp.
+
+\hypertarget{class_organisme_a09a3d9937c91142b69b8d682c5804f37}{\index{Organisme@{Organisme}!idmax@{idmax}}
+\index{idmax@{idmax}!Organisme@{Organisme}}
+\subsubsection[{idmax}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::idmax\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a09a3d9937c91142b69b8d682c5804f37}
+
+
+Conté en tot moment l'identificador de la cèl·lula amb id de màxim valor de l'organisme. Si l'organisme és mort el seu valor és 0. 
+
+
+
+Definició a la línia 122 del fitxer Organisme.\-hpp.
+
+
+
+La documentació d'aquesta classe es va generar a partir dels següents fitxers\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_organisme_8hpp}{Organisme.\-hpp}\item 
+\hyperlink{_organisme_8cpp}{Organisme.\-cpp}\end{DoxyCompactItemize}

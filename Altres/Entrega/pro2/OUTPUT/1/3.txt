@@ -1,0 +1,44 @@
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 2
+
+ORGANISMOS
+5 : 0 21 -1 0 22 1 0 20 -1 0 2 1 0 1 1 0 3 -1 0 5 1 0 4 -1 0 
+6 : 0 21 -1 0 22 1 0 20 -1 0 2 1 0 1 1 0 3 -1 0 5 1 0 4 -1 0 
+
+RANKING
+1 : 2 5
+2 : 1 5
+3 : 4 6
+4 : 3 6
+5 :
+6 :
+
+ORGANISMOS
+5 : 0 21 -1 0 23 1 0 22 1 0 24 1 0 20 -1 0 2 1 0 1 1 0 3 -1 0 25 1 0 5 1 0 26 1 0 4 -1 0 
+6 : 0 21 -1 0 20 -1 0 2 1 0 1 1 0 3 -1 0 4 -1 0 
+
+ORGANISMOS
+6 : 0 21 -1 0 20 -1 0 2 1 0 1 1 0 3 -1 0 4 -1 0 
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 2
+
+FIN
+
+Organismos en total : 8
+Organismos vivos : 8
+
+ORGANISMOS
+7 : 0 2 -1 0 19 -1 0 1 1 0 3 -1 0 5 1 0 4 -1 0 
+8 : 0 6 -1 0 7 1 0 4 -1 0 5 -1 0 2 1 0 1 1 0 3 -1 0 
+
+RANKING
+1 : 2 5 3 7
+2 : 1 5 4 8
+3 : 4 6 1 7
+4 : 3 6 2 8
+5 :
+6 :
+7 :
+8 :
+

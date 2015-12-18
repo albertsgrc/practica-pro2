@@ -1,0 +1,748 @@
+\hypertarget{class_sistema}{\section{Referència de la Classe Sistema}
+\label{class_sistema}\index{Sistema@{Sistema}}
+}
+
+
+{\bfseries Descripció}  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_sistema_1_1_info_emparellaments}{Info\-Emparellaments}
+\end{DoxyCompactItemize}
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sistema_af9b1456fcf4e33c12d183692109c27fc}{Sistema} (int pobmax)
+\begin{DoxyCompactList}\small\item\em Creadora de \hyperlink{class_sistema}{Sistema}. \end{DoxyCompactList}\item 
+\hyperlink{class_sistema_aafc86e0f2c3d734fb4c0985f70c27a1a}{$\sim$\-Sistema} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+int \hyperlink{class_sistema_a084895a86d0230cbb4af0d0041422fe3}{consul\-\_\-pob} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de la {\bfseries població històrica} del \hyperlink{class_sistema}{Sistema}. \end{DoxyCompactList}\item 
+int \hyperlink{class_sistema_a112609f3baf6a0267ce61aab10020418}{consul\-\_\-nvius} () const 
+\begin{DoxyCompactList}\small\item\em Consultora que indica la {\bfseries quantitat} d'organismes vius del \hyperlink{class_sistema}{Sistema}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sistema_aa56f1fe7fee226ff6624363695ace488}{existeix\-\_\-org} (int id) const 
+\begin{DoxyCompactList}\small\item\em Consultora de l'{\bfseries existència} d'un organisme. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sistema_a3eba48be6e01d213f87d9c12c22530fe}{es\-\_\-viu\-\_\-org} (int id) const 
+\begin{DoxyCompactList}\small\item\em Consultora de {\bfseries l'estat vital} d'un organisme. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sistema_a3ab5d199d6f7af87c3b00f51702da9dc}{es\-\_\-estirable\-\_\-org} (int id) const 
+\begin{DoxyCompactList}\small\item\em Consultora de l'{\bfseries estirabilitat} d'un organisme. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sistema_adbaf521a9576706bf2212f7ce24d2d0e}{esta\-\_\-ple} () const 
+\begin{DoxyCompactList}\small\item\em Consultora que indica si el sistema està plè (la seva població coincideix amb la màxima permesa). \end{DoxyCompactList}\item 
+int \hyperlink{class_sistema_ad7f3d8c32a3792fec6c4641769c07c04}{consul\-\_\-fills\-\_\-repr} () const 
+\begin{DoxyCompactList}\small\item\em Consultora del nombre de fills nascuts en l'última ronda de reproducció del sistema. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_ad3028a34f72a19d63a2d126bb4422b5b}{escriure\-\_\-org} (int id)
+\begin{DoxyCompactList}\small\item\em Operació d'{\bfseries escriptura} d'organisme per identificador. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_a6fe943c69b0f8b76d7ea9696867f4fa1}{llegir\-\_\-pob\-\_\-ini} (int pobini)
+\begin{DoxyCompactList}\small\item\em Operació de {\bfseries lectura} de la població inicial del sistema. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_a873e9e89616d383f864191304f804063}{retallar\-\_\-org} (int id)
+\begin{DoxyCompactList}\small\item\em Operació de {\bfseries retallada} d'un organisme per identificador. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_abe6ae69cefc9adb10b7650635b1f7336}{estirar\-\_\-org} (int id)
+\begin{DoxyCompactList}\small\item\em Operació d'{\bfseries estirament} d'un organisme per identificador. \end{DoxyCompactList}\item 
+void \hyperlink{class_sistema_a63e70593ee3bcd19f8e2e2b0d525906c}{aplicar\-\_\-ronda\-\_\-reproduccio} (\hyperlink{class_ranking}{Ranking} \&rank)
+\begin{DoxyCompactList}\small\item\em Operació que aplica una {\bfseries ronda de reproducció} al sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipus Privats}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ bool $>$ \hyperlink{class_sistema_aed93022dab0bed25a0b6439559ea1b8b}{Vbool}
+\item 
+typedef list$<$ \hyperlink{struct_sistema_1_1_info_emparellaments}{Info\-Emparellaments} $>$ \hyperlink{class_sistema_ad3aa7da7cab0f54bf8c67b62b7b1e8ef}{Lemp}
+\end{DoxyCompactItemize}
+\subsection*{Mètodes Privats}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_sistema_a13f288276b20ffc386edd42964b60277}{emparellar\-\_\-organismes} (\hyperlink{class_sistema_aed93022dab0bed25a0b6439559ea1b8b}{Vbool} \&ocupat, \hyperlink{class_ranking}{Ranking} \&rank, int i, int j, Lemp\-::iterator it)
+\begin{DoxyCompactList}\small\item\em Operació que emparella dos organismes del sistema i ordena (en el sentit imperatiu) l'actualització del ranking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{class_organisme}{Organisme} $>$ \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}
+\begin{DoxyCompactList}\small\item\em Vector que conté en tot moment els organismes (vius i morts) del sistema. El seu tamany coincideix amb la població màxima permesa del sistema i la posició {\itshape i-\/èssima} del vector conté l'\hyperlink{class_organisme}{Organisme} amb identificador {\itshape id = i + 1} \end{DoxyCompactList}\item 
+int \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob}
+\begin{DoxyCompactList}\small\item\em Conté el nombre d'organismes (vius i morts que hagin estat vius algun cop) del \hyperlink{class_sistema}{Sistema}. \end{DoxyCompactList}\item 
+int \hyperlink{class_sistema_a3ece5701abfce5aafee7c06a11e90573}{nmorts}
+\begin{DoxyCompactList}\small\item\em Conté el nombre d'organismes morts existents al \hyperlink{class_sistema}{Sistema}. \end{DoxyCompactList}\item 
+int \hyperlink{class_sistema_aebdda1654fd616f76f03691926ecfb09}{nfills\-\_\-ur}
+\begin{DoxyCompactList}\small\item\em Conté el nombre de fills nascuts en l'última ronda de reproducció del sistema, si la ha hagut. Sinó el seu valor és 0. \end{DoxyCompactList}\item 
+\hyperlink{class_sistema_ad3aa7da7cab0f54bf8c67b62b7b1e8ef}{Lemp} \hyperlink{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}{empar}
+\begin{DoxyCompactList}\small\item\em Llista que conté la informació dels emparellaments dels organismes existents al \hyperlink{class_sistema}{Sistema}, excepte l'últim, que pel que s'ha demostrat en la descripció de la classe no en necessitem la informació dels emparellaments perquè no es podrà emparellar de moment. Té tamany {\itshape pob -\/ 1}.\par
+ La posició i de la llista conté un enter {\itshape ini} que representa l'id decrementat en una unitat de l'organisme amb id més petit a partir del qual l'organisme amb id={\itshape i+1} pot emparellar-\/se en un moment donat. \par
+Donat un organisme d'identificador menor a {\itshape ini}, o bé no s'hi pot emparellar (perquè té id igual o menor), o bé és mort, o bé ja s'hi ha emparellat. Si l'organisme {\itshape i+1} no té cap organisme per emparellar-\/se aleshores el valor de la posició {\itshape i} coincideix amb la població actual. \par
+La posició {\itshape i} de la llista també conté un vector de booleans {\itshape e} de tamany {\itshape \mbox{[}població màxima -\/ i -\/ 1\mbox{]}} (pel que es demostra en la descripció de la classe) i la posició {\itshape j} indica si l'organisme amb {\itshape id = i + 1} s'ha emparellat amb l'organisme amb {\itshape id = i + j + 2}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+{\bfseries Descripció} 
+
+Representa un sistema format per organismes celulars on es poden produïr reproduccions entre organismes i creixement, decreixement i mort dels mateixos.
+
+Es caracteritza per tenir un vector que conté els organismes i una població màxima permesa.
+
+{\bfseries Comentaris i observacions\-:}
+
+{\bfseries Com.\-:} Definim que un organisme {\itshape existeix} en el sistema sii el seu identificador està entre 1 i la població històrica del sistema (organismes vius i morts que han passat pel sistema), ambdós inclosos. Formalment, {\itshape 1 $<$= id $<$= pob}.
+
+{\bfseries Obs.\-:} Pel que fa a les rondes de reproducció del sistema, es pot demostrar que {\bfseries un organisme mai es pot emparellar amb un organisme d'identificador menor o igual}.\par
+ {\bfseries Dem.\-:} Sigui {\ttfamily id} l'identificador de l'organisme que intenta escollir a un cert organisme amb identificador {\ttfamily id'} Per casos\-: 
+\begin{DoxyItemize}
+\item Si {\ttfamily id} = {\ttfamily id'} per les condicions de l'enunciat un organisme no es pot emparellar amb ell mateix.  
+\item Si {\ttfamily id'} $<$ {\ttfamily id}, per la forma en la que es desenvolupen les rondes, l'organisme {\ttfamily id'} haurà provat d'escollir a un organisme abans que {\ttfamily id}. 
+\begin{DoxyItemize}
+\item En el cas que n'hagi pogut escollir algun\-: 
+\begin{DoxyItemize}
+\item Si el que ha escollit és l'organisme {\ttfamily id}, efectivament {\ttfamily id} ja estarà ocupat per la ronda i no podrà escollir.  
+\item Si el que ha escollit no és {\ttfamily id} aleshores tampoc podrà {\ttfamily id} escollir a {\ttfamily id'} ja que {\ttfamily id'} ja estarà ocupat en aquella ronda.  
+\end{DoxyItemize}
+\item En el cas que {\ttfamily id'} no hagi pogut escollir a cap organisme, voldrà dir que, o bé {\ttfamily id'} és mort, o bé {\ttfamily id} és mort, o ja s'han emparellat o {\ttfamily id} ja està ocupat en la ronda. Si {\ttfamily id'} és mort òbviament {\ttfamily id} no podrà escollir-\/lo. Si {\ttfamily id} és mort òbviament tampoc podrà escollir a cap organisme. Si ja s'ha emparellat amb {\ttfamily id} òbviament {\ttfamily id} no podrà escollir un organisme amb el qual ja s'ha emparellat. Si està ocupat en la ronda òbviament {\ttfamily id} no podrà escollir {\ttfamily id'} donat que {\ttfamily id} ja estàra ocupat.  
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Aquest resultat ens porta directament a un corol·lari\-: 
+\begin{DoxyEnumerate}
+\item L'organisme amb identificador màxim del sistema en una ronda donada mai podrà escollir a cap altre per emparellar-\/se (això no vol dir que no pugui ser escollit). \par
+ {\bfseries Dem}\-: Sigui {\ttfamily omax} l'organisme amb identificador màxim en una ronda donada. En aquest cas el nº d'organismes amb identificador major que {\ttfamily omax} és nul, ja que hem definit que {\ttfamily omax} és el d'id màxim. En efecte, pel resultat anterior, mai podrà escollir a cap altre organisme per reproduir-\/se. 
+\end{DoxyEnumerate}Aquest corol·lari ens permet no haver de guardar la informació dels organismes que pugui escollir o hagi escollit l'organisme amb identificador més gran del sistema en un moment donat, ja que aquest no podrà escollir-\/ne a cap de moment. 
+
+Definició a la línia 84 del fitxer Sistema.\-hpp.
+
+
+
+\subsection{Documentació de les Definicions de Tipus Membre}
+\hypertarget{class_sistema_aed93022dab0bed25a0b6439559ea1b8b}{\index{Sistema@{Sistema}!Vbool@{Vbool}}
+\index{Vbool@{Vbool}!Sistema@{Sistema}}
+\subsubsection[{Vbool}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<$bool$>$ {\bf Sistema\-::\-Vbool}\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_aed93022dab0bed25a0b6439559ea1b8b}
+
+
+Definició a la línia 241 del fitxer Sistema.\-hpp.
+
+\hypertarget{class_sistema_ad3aa7da7cab0f54bf8c67b62b7b1e8ef}{\index{Sistema@{Sistema}!Lemp@{Lemp}}
+\index{Lemp@{Lemp}!Sistema@{Sistema}}
+\subsubsection[{Lemp}]{\setlength{\rightskip}{0pt plus 5cm}typedef list$<${\bf Info\-Emparellaments}$>$ {\bf Sistema\-::\-Lemp}\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_ad3aa7da7cab0f54bf8c67b62b7b1e8ef}
+
+
+Definició a la línia 246 del fitxer Sistema.\-hpp.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\hypertarget{class_sistema_af9b1456fcf4e33c12d183692109c27fc}{\index{Sistema@{Sistema}!Sistema@{Sistema}}
+\index{Sistema@{Sistema}!Sistema@{Sistema}}
+\subsubsection[{Sistema}]{\setlength{\rightskip}{0pt plus 5cm}Sistema\-::\-Sistema (
+\begin{DoxyParamCaption}
+\item[{int}]{pobmax}
+\end{DoxyParamCaption}
+)}}\label{class_sistema_af9b1456fcf4e33c12d183692109c27fc}
+
+
+Creadora de \hyperlink{class_sistema}{Sistema}. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em pobmax} & Indica la població màxima que pot contenir el sistema. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily pobmax} $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és un \hyperlink{class_sistema}{Sistema} amb població nul·la, i amb població màxima permesa {\ttfamily pobmax} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 38 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+38                            \{
+39     \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg} = vector<Organisme>(pobmax);
+40     \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob} = \hyperlink{class_sistema_a3ece5701abfce5aafee7c06a11e90573}{nmorts} = \hyperlink{class_sistema_aebdda1654fd616f76f03691926ecfb09}{nfills\_ur} = 0;
+41 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_aafc86e0f2c3d734fb4c0985f70c27a1a}{\index{Sistema@{Sistema}!$\sim$\-Sistema@{$\sim$\-Sistema}}
+\index{$\sim$\-Sistema@{$\sim$\-Sistema}!Sistema@{Sistema}}
+\subsubsection[{$\sim$\-Sistema}]{\setlength{\rightskip}{0pt plus 5cm}Sistema\-::$\sim$\-Sistema (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_sistema_aafc86e0f2c3d734fb4c0985f70c27a1a}
+
+
+Destructora per defecte. 
+
+
+
+Definició a la línia 45 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+45 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\hypertarget{class_sistema_a084895a86d0230cbb4af0d0041422fe3}{\index{Sistema@{Sistema}!consul\-\_\-pob@{consul\-\_\-pob}}
+\index{consul\-\_\-pob@{consul\-\_\-pob}!Sistema@{Sistema}}
+\subsubsection[{consul\-\_\-pob}]{\setlength{\rightskip}{0pt plus 5cm}int Sistema\-::consul\-\_\-pob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sistema_a084895a86d0230cbb4af0d0041422fe3}
+
+
+Consultora de la {\bfseries població històrica} del \hyperlink{class_sistema}{Sistema}. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és la població històrica (nombre d'organismes vius i morts) del paràmetre implícit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 49 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+49                               \{
+50     \textcolor{keywordflow}{return} \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob};
+51 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_a112609f3baf6a0267ce61aab10020418}{\index{Sistema@{Sistema}!consul\-\_\-nvius@{consul\-\_\-nvius}}
+\index{consul\-\_\-nvius@{consul\-\_\-nvius}!Sistema@{Sistema}}
+\subsubsection[{consul\-\_\-nvius}]{\setlength{\rightskip}{0pt plus 5cm}int Sistema\-::consul\-\_\-nvius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sistema_a112609f3baf6a0267ce61aab10020418}
+
+
+Consultora que indica la {\bfseries quantitat} d'organismes vius del \hyperlink{class_sistema}{Sistema}. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat es el nombre d'organismes vius del paràmetre implícit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 73 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+73                                 \{
+74     \textcolor{keywordflow}{return} \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob} - \hyperlink{class_sistema_a3ece5701abfce5aafee7c06a11e90573}{nmorts};
+75 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_aa56f1fe7fee226ff6624363695ace488}{\index{Sistema@{Sistema}!existeix\-\_\-org@{existeix\-\_\-org}}
+\index{existeix\-\_\-org@{existeix\-\_\-org}!Sistema@{Sistema}}
+\subsubsection[{existeix\-\_\-org}]{\setlength{\rightskip}{0pt plus 5cm}bool Sistema\-::existeix\-\_\-org (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{class_sistema_aa56f1fe7fee226ff6624363695ace488}
+
+
+Consultora de l'{\bfseries existència} d'un organisme. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em id} & Identificador de l'organisme a consultar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily id} $>$= 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si l'organisme amb identificador {\ttfamily id} existeix al paràmetre implícit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 69 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+69                                        \{
+70     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id} <= \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob};
+71 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_a3eba48be6e01d213f87d9c12c22530fe}{\index{Sistema@{Sistema}!es\-\_\-viu\-\_\-org@{es\-\_\-viu\-\_\-org}}
+\index{es\-\_\-viu\-\_\-org@{es\-\_\-viu\-\_\-org}!Sistema@{Sistema}}
+\subsubsection[{es\-\_\-viu\-\_\-org}]{\setlength{\rightskip}{0pt plus 5cm}bool Sistema\-::es\-\_\-viu\-\_\-org (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{class_sistema_a3eba48be6e01d213f87d9c12c22530fe}
+
+
+Consultora de {\bfseries l'estat vital} d'un organisme. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em id} & Identificador de l'organisme a consultar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily id} $>$= 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si l'organisme amb identificador {\ttfamily id} existeix al paràmetre implícit i està viu 
+\end{DoxyPostcond}
+
+
+Definició a la línia 53 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+53                                      \{
+54     \textcolor{comment}{/* Per la post de la creadora d'Organisme sabem que qualsevol organisme}
+55 \textcolor{comment}{       no existent al parametre implícit es mort, per tant nomes ens cal}
+56 \textcolor{comment}{       comprovar si no esta mort, ja que si aixo és cert podem estar segurs}
+57 \textcolor{comment}{       que existeix */}
+58     \textcolor{keywordflow}{return} not \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[\textcolor{keywordtype}{id} - 1].es\_mort();
+59 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_a3ab5d199d6f7af87c3b00f51702da9dc}{\index{Sistema@{Sistema}!es\-\_\-estirable\-\_\-org@{es\-\_\-estirable\-\_\-org}}
+\index{es\-\_\-estirable\-\_\-org@{es\-\_\-estirable\-\_\-org}!Sistema@{Sistema}}
+\subsubsection[{es\-\_\-estirable\-\_\-org}]{\setlength{\rightskip}{0pt plus 5cm}bool Sistema\-::es\-\_\-estirable\-\_\-org (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{class_sistema_a3ab5d199d6f7af87c3b00f51702da9dc}
+
+
+Consultora de l'{\bfseries estirabilitat} d'un organisme. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em id} & Identificador de l'organisme a consultar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily id} $>$= 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si l'organisme amb identificador {\ttfamily id} existeix al paràmetre implícit i és estirable 
+\end{DoxyPostcond}
+
+
+Definició a la línia 61 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+61                                            \{
+62     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id} <= \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob} and not \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[\textcolor{keywordtype}{id} - 1].esta\_retallat();
+63 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_adbaf521a9576706bf2212f7ce24d2d0e}{\index{Sistema@{Sistema}!esta\-\_\-ple@{esta\-\_\-ple}}
+\index{esta\-\_\-ple@{esta\-\_\-ple}!Sistema@{Sistema}}
+\subsubsection[{esta\-\_\-ple}]{\setlength{\rightskip}{0pt plus 5cm}bool Sistema\-::esta\-\_\-ple (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sistema_adbaf521a9576706bf2212f7ce24d2d0e}
+
+
+Consultora que indica si el sistema està plè (la seva població coincideix amb la màxima permesa). 
+
+\begin{DoxyPrecond}{Precondició}
+La població del paràmetre implícit és com a molt la màxima permesa 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si el paràmetre implícit està plè 
+\end{DoxyPostcond}
+
+
+Definició a la línia 65 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+65                              \{
+66     \textcolor{keywordflow}{return} \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob} == \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}.size();
+67 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_ad7f3d8c32a3792fec6c4641769c07c04}{\index{Sistema@{Sistema}!consul\-\_\-fills\-\_\-repr@{consul\-\_\-fills\-\_\-repr}}
+\index{consul\-\_\-fills\-\_\-repr@{consul\-\_\-fills\-\_\-repr}!Sistema@{Sistema}}
+\subsubsection[{consul\-\_\-fills\-\_\-repr}]{\setlength{\rightskip}{0pt plus 5cm}int Sistema\-::consul\-\_\-fills\-\_\-repr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_sistema_ad7f3d8c32a3792fec6c4641769c07c04}
+
+
+Consultora del nombre de fills nascuts en l'última ronda de reproducció del sistema. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és el nombre de {\bfseries fills nascuts en l'última ronda de reproducció} del sistema, si n'hi ha hagut. Si no n'hi ha hagut, el resultat és zero 
+\end{DoxyPostcond}
+
+
+Definició a la línia 77 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+77                                      \{
+78     \textcolor{keywordflow}{return} \hyperlink{class_sistema_aebdda1654fd616f76f03691926ecfb09}{nfills\_ur};
+79 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_ad3028a34f72a19d63a2d126bb4422b5b}{\index{Sistema@{Sistema}!escriure\-\_\-org@{escriure\-\_\-org}}
+\index{escriure\-\_\-org@{escriure\-\_\-org}!Sistema@{Sistema}}
+\subsubsection[{escriure\-\_\-org}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\-::escriure\-\_\-org (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_sistema_ad3028a34f72a19d63a2d126bb4422b5b}
+
+
+Operació d'{\bfseries escriptura} d'organisme per identificador. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em id} & Identificador de l'organisme a escriure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily id} És un identificador d'un \hyperlink{class_organisme}{Organisme} existent al paràmetre implícit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha escrit l'\hyperlink{class_organisme}{Organisme} amb identificador {\ttfamily id} pel canal estàndard de sortida 
+\end{DoxyPostcond}
+
+
+Definició a la línia 81 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+81                                  \{
+82     cout << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{" : "};
+83     \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[\textcolor{keywordtype}{id} - 1].escriure\_organisme();
+84 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_a6fe943c69b0f8b76d7ea9696867f4fa1}{\index{Sistema@{Sistema}!llegir\-\_\-pob\-\_\-ini@{llegir\-\_\-pob\-\_\-ini}}
+\index{llegir\-\_\-pob\-\_\-ini@{llegir\-\_\-pob\-\_\-ini}!Sistema@{Sistema}}
+\subsubsection[{llegir\-\_\-pob\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\-::llegir\-\_\-pob\-\_\-ini (
+\begin{DoxyParamCaption}
+\item[{int}]{pobini}
+\end{DoxyParamCaption}
+)}}\label{class_sistema_a6fe943c69b0f8b76d7ea9696867f4fa1}
+
+
+Operació de {\bfseries lectura} de la població inicial del sistema. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em pobini} & Conté el nombre d'organismes de la població inicial del sistema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily pobini} $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El paràmetre implícit conté la població inicial del sistema 
+\end{DoxyPostcond}
+
+
+Definició a la línia 88 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+88                                        \{
+89     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < pobini - 1; ++i) \{
+90         \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[i].llegir\_organisme();
+91         InfoEmparellaments ie;
+92         ie.e = \hyperlink{class_sistema_aed93022dab0bed25a0b6439559ea1b8b}{Vbool}(\hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}.size() - i - 1, \textcolor{keyword}{false});
+93         ie.ini = i + 1;
+94         \hyperlink{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}{empar}.insert(\hyperlink{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}{empar}.end(), ie);
+95     \}
+96     \textcolor{comment}{/* L'ultim organisme no necessita informacio sobre emparellaments}
+97 \textcolor{comment}{       donat que de moment no en podra escollir a cap. L'acces es valid}
+98 \textcolor{comment}{       perque pobini >= 1 per la pre */}
+99     \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[pobini - 1].llegir\_organisme();
+100     \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob} = pobini;
+101 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_a873e9e89616d383f864191304f804063}{\index{Sistema@{Sistema}!retallar\-\_\-org@{retallar\-\_\-org}}
+\index{retallar\-\_\-org@{retallar\-\_\-org}!Sistema@{Sistema}}
+\subsubsection[{retallar\-\_\-org}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\-::retallar\-\_\-org (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_sistema_a873e9e89616d383f864191304f804063}
+
+
+Operació de {\bfseries retallada} d'un organisme per identificador. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em id} & Identificador de l'organisme a retallar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily id} És un indentificador d'un organisme existent i viu al paràmetre implícit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+L'\hyperlink{class_organisme}{Organisme} amb identificador {\ttfamily id} del paràmetre implícit ha patit una retallada. Si l'organisme ha mort, el nombre de morts del paràmetre implícit s'ha incrementat en 1 
+\end{DoxyPostcond}
+
+
+Definició a la línia 103 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+103                                  \{
+104     \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[\textcolor{keywordtype}{id} - 1].aplicar\_retallada();
+105     \textcolor{comment}{/* Comprovem si ha mort per la retallada i en cas afirmatiu incrementem}
+106 \textcolor{comment}{       el nº de morts */}
+107     \textcolor{keywordflow}{if} (\hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[\textcolor{keywordtype}{id} - 1].es\_mort()) ++\hyperlink{class_sistema_a3ece5701abfce5aafee7c06a11e90573}{nmorts};
+108 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_abe6ae69cefc9adb10b7650635b1f7336}{\index{Sistema@{Sistema}!estirar\-\_\-org@{estirar\-\_\-org}}
+\index{estirar\-\_\-org@{estirar\-\_\-org}!Sistema@{Sistema}}
+\subsubsection[{estirar\-\_\-org}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\-::estirar\-\_\-org (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_sistema_abe6ae69cefc9adb10b7650635b1f7336}
+
+
+Operació d'{\bfseries estirament} d'un organisme per identificador. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em id} & Identificador de l'organisme del paràmetre implícit a estirar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+{\ttfamily id} És un identificador d'un organisme existent i viu al paràmetre implícit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+L'organisme amb identificador {\ttfamily id} del paràmetre implícit ha patit un estirament 
+\end{DoxyPostcond}
+
+
+Definició a la línia 110 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+110                                 \{
+111     \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[\textcolor{keywordtype}{id} - 1].aplicar\_estirament();
+112 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_a63e70593ee3bcd19f8e2e2b0d525906c}{\index{Sistema@{Sistema}!aplicar\-\_\-ronda\-\_\-reproduccio@{aplicar\-\_\-ronda\-\_\-reproduccio}}
+\index{aplicar\-\_\-ronda\-\_\-reproduccio@{aplicar\-\_\-ronda\-\_\-reproduccio}!Sistema@{Sistema}}
+\subsubsection[{aplicar\-\_\-ronda\-\_\-reproduccio}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\-::aplicar\-\_\-ronda\-\_\-reproduccio (
+\begin{DoxyParamCaption}
+\item[{{\bf Ranking} \&}]{rank}
+\end{DoxyParamCaption}
+)}}\label{class_sistema_a63e70593ee3bcd19f8e2e2b0d525906c}
+
+
+Operació que aplica una {\bfseries ronda de reproducció} al sistema. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in,out}  & {\em rank} & \hyperlink{class_ranking}{Ranking} d'organismes associat al sistema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+
+\begin{DoxyItemize}
+\item Població actual del sistema = P\-O\-B 
+\item P\-O\-B $>$ 0 
+\item Sigui i tal que 1 $<$= i $<$= P\-O\-B l’element i de la llista d’informació d’emparellaments del paràmetre implícit conté la informació dels emparellaments en rondes anteriors de l’organisme amb id = i
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+
+\begin{DoxyItemize}
+\item Si s’ha arribat a la població màxima del sistema durant la ronda, els organismes amb identificadors 1..i han intentat escollir a un altre organisme per reproduir-\/se (o han estat escollits o són morts). Altrament, els organismes amb identificadors 1...P\-O\-B-\/1 han intentat escollir a un altre organisme per reproduir-\/se (o han estat escollits o són morts) 
+\item S'ha actualitzat el nombre de fills nascuts en la ronda 
+\item El rànking s'ha actualitzat amb la informació de les reproduccions que hagin tingut fills en la ronda
+\end{DoxyItemize}
+\end{DoxyPostcond}
+
+
+Definició a la línia 114 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+114                                                     \{
+115   \textcolor{keywordtype}{int} pobaux = \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob};
+116   \textcolor{keywordtype}{int} i = 0;
+117   Lemp::iterator it = \hyperlink{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}{empar}.begin();
+118   \hyperlink{class_sistema_aed93022dab0bed25a0b6439559ea1b8b}{Vbool} ocupat(pobaux, \textcolor{keyword}{false});
+119   \hyperlink{class_sistema_aebdda1654fd616f76f03691926ecfb09}{nfills\_ur} = 0;
+120   \textcolor{keywordflow}{while} (i < pobaux - 1 and \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob} < \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}.size()) \{
+121     \textcolor{keywordflow}{if} (not ocupat[i] and not \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[i].es\_mort()) \{
+122       \textcolor{keywordtype}{bool} incomp = \textcolor{keyword}{true};
+123       \textcolor{comment}{/* Avancem l'organisme inicial d'emparellament mentre aquest}
+124 \textcolor{comment}{       * sigui mort o ja s'hi hagi emparellat. Aixo ens permet tenir}
+125 \textcolor{comment}{       * una notable millora en l'eficiencia de l'operacio donat que}
+126 \textcolor{comment}{       * la proxima vegada que l'organisme es reprodueixi no començarem}
+127 \textcolor{comment}{       * a buscar candidats des del principi, sino des del primer id}
+128 \textcolor{comment}{       * a partir del qual sabem que tots els anteriors son candidats no}
+129 \textcolor{comment}{       * no valids */}
+130       \textcolor{keywordflow}{while} (incomp and (*it).ini < pobaux) \{
+131         \textcolor{keywordtype}{int} cand = (*it).ini;
+132         incomp = \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[cand].es\_mort() or (*it).e[cand-i-1];
+133         if (not incomp) \{
+134           \textcolor{keywordflow}{if} (not ocupat[cand]) \hyperlink{class_sistema_a13f288276b20ffc386edd42964b60277}{emparellar\_organismes}(ocupat, rank, i, cand, it);
+135           \textcolor{keywordflow}{else} \{
+136             ++cand;
+137             \textcolor{keywordtype}{bool} emparellables = \textcolor{keyword}{false};
+138             \textcolor{keywordflow}{while} (not emparellables and cand < pobaux) \{
+139               \textcolor{keywordflow}{if} (not ocupat[cand] and not \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[cand].es\_mort()
+140                                    and not (*it).e[cand-i-1]) \{
+141                 emparellables = \textcolor{keyword}{true};
+142                 \hyperlink{class_sistema_a13f288276b20ffc386edd42964b60277}{emparellar\_organismes}(ocupat, rank, i, cand, it);
+143               \}
+144               ++cand;
+145             \}
+146           \}
+147         \}
+148         \textcolor{keywordflow}{else} ++(*it).ini;
+149       \}
+150     \}
+151     ++i;
+152     ++it;
+153   \}
+154 \}
+\end{DoxyCode}
+\hypertarget{class_sistema_a13f288276b20ffc386edd42964b60277}{\index{Sistema@{Sistema}!emparellar\-\_\-organismes@{emparellar\-\_\-organismes}}
+\index{emparellar\-\_\-organismes@{emparellar\-\_\-organismes}!Sistema@{Sistema}}
+\subsubsection[{emparellar\-\_\-organismes}]{\setlength{\rightskip}{0pt plus 5cm}void Sistema\-::emparellar\-\_\-organismes (
+\begin{DoxyParamCaption}
+\item[{{\bf Vbool} \&}]{ocupat, }
+\item[{{\bf Ranking} \&}]{rank, }
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{Lemp\-::iterator}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_a13f288276b20ffc386edd42964b60277}
+
+
+Operació que emparella dos organismes del sistema i ordena (en el sentit imperatiu) l'actualització del ranking. 
+
+
+\begin{DoxyParams}[1]{Paràmetres}
+\mbox{\tt in,out}  & {\em ocupat} & Vector de booleans associat a la ronda que indica si els organismes ja s'han emparellat(en la ronda). \\
+\hline
+\mbox{\tt in,out}  & {\em rank} & \hyperlink{class_ranking}{Ranking} associat al sistema \\
+\hline
+ & {\em i} & {\itshape i + 1} És l'identificador de l'organisme que ha escollit a l'organisme {\itshape j + 1} per reproduir-\/se \\
+\hline
+ & {\em j} & {\itshape j + 1} és l'organisme escollit per l'organisme {\itshape i + 1} per reproduir-\/se \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+
+\begin{DoxyItemize}
+\item {\itshape 0 $<${\ttfamily j} $<$= agafat.\-size()} 
+\item {\ttfamily i} $<$ {\ttfamily j} 
+\item {\itshape agafat.\-size() $<$ població màxima permesa} 
+\item {\ttfamily rank} és un rànking associat al paràmetre implícit (comparteixen població màxima)
+\end{DoxyItemize}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+L'organisme {\itshape {\ttfamily i+1}} s'ha emparellat amb l'organisme {\ttfamily j+1}, els dos organismes s'han marcat com a agafats en la ronda i, en cas de que fóssin compatibles s'ha incrementat la població i el nombre de fills nascuts en la ronda en una unitat, a més d'haver actualitzat {\ttfamily rank} conseqüentment 
+\end{DoxyPostcond}
+
+
+Definició a la línia 10 del fitxer Sistema.\-cpp.
+
+
+\begin{DoxyCode}
+11                                                      \{
+12     \textcolor{comment}{/* Marquem que els organismes s'han emparellat en el vector de booleans}
+13 \textcolor{comment}{       de la ronda i la matriu d'emparellaments */}
+14     ocupat[i] = ocupat[j] = (*it).e[j - i - 1] = \textcolor{keyword}{true};
+15     \textcolor{keywordtype}{bool} compatibles;
+16     \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[i].reproduir\_parella(\hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[j], \hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}[\hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob}], compatibles);
+17     \textcolor{keywordflow}{if} (compatibles) \{ \textcolor{comment}{// Compatibles ens indica si s'ha creat el fill}
+18         \textcolor{comment}{// Creem l'informacio d'emparellaments de l'ultim organisme}
+19         \textcolor{comment}{// que s'havia creat (que encara no en tenia perque no la necessitava,}
+20         \textcolor{comment}{// pero ara que n'ha nascut un amb identificador mes gran que ell si}
+21         \textcolor{comment}{// que la necessita}
+22         InfoEmparellaments ie;
+23         \textcolor{comment}{// ie.e sempre tindra tamany major que 0 ja que}
+24         \textcolor{comment}{// pob < vorg.size() (sinó hauria acabat l'experiment)}
+25         ie.e = \hyperlink{class_sistema_aed93022dab0bed25a0b6439559ea1b8b}{Vbool}(\hyperlink{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{vorg}.size() - \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob}, \textcolor{keyword}{false});
+26         ie.ini = \hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob};
+27         \hyperlink{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}{empar}.insert(\hyperlink{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}{empar}.end(), ie);
+28         rank.\hyperlink{class_ranking_a10b14da6a47f06eccff565a2d490b5fe}{afegir\_parella}(i, j, pob); \textcolor{comment}{// 'pob+1' és l'identificador del fill}
+29         ++\hyperlink{class_sistema_a5fe670604926861f960dfb33c80d45cf}{pob};
+30         ++\hyperlink{class_sistema_aebdda1654fd616f76f03691926ecfb09}{nfills\_ur};
+31     \}
+32 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\hypertarget{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}{\index{Sistema@{Sistema}!vorg@{vorg}}
+\index{vorg@{vorg}!Sistema@{Sistema}}
+\subsubsection[{vorg}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Organisme}$>$ Sistema\-::vorg\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_aaf10c33a8449e355103fb2d849bb3d58}
+
+
+Vector que conté en tot moment els organismes (vius i morts) del sistema. El seu tamany coincideix amb la població màxima permesa del sistema i la posició {\itshape i-\/èssima} del vector conté l'\hyperlink{class_organisme}{Organisme} amb identificador {\itshape id = i + 1} 
+
+
+
+Definició a la línia 253 del fitxer Sistema.\-hpp.
+
+\hypertarget{class_sistema_a5fe670604926861f960dfb33c80d45cf}{\index{Sistema@{Sistema}!pob@{pob}}
+\index{pob@{pob}!Sistema@{Sistema}}
+\subsubsection[{pob}]{\setlength{\rightskip}{0pt plus 5cm}int Sistema\-::pob\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_a5fe670604926861f960dfb33c80d45cf}
+
+
+Conté el nombre d'organismes (vius i morts que hagin estat vius algun cop) del \hyperlink{class_sistema}{Sistema}. 
+
+
+
+Definició a la línia 256 del fitxer Sistema.\-hpp.
+
+\hypertarget{class_sistema_a3ece5701abfce5aafee7c06a11e90573}{\index{Sistema@{Sistema}!nmorts@{nmorts}}
+\index{nmorts@{nmorts}!Sistema@{Sistema}}
+\subsubsection[{nmorts}]{\setlength{\rightskip}{0pt plus 5cm}int Sistema\-::nmorts\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_a3ece5701abfce5aafee7c06a11e90573}
+
+
+Conté el nombre d'organismes morts existents al \hyperlink{class_sistema}{Sistema}. 
+
+
+
+Definició a la línia 258 del fitxer Sistema.\-hpp.
+
+\hypertarget{class_sistema_aebdda1654fd616f76f03691926ecfb09}{\index{Sistema@{Sistema}!nfills\-\_\-ur@{nfills\-\_\-ur}}
+\index{nfills\-\_\-ur@{nfills\-\_\-ur}!Sistema@{Sistema}}
+\subsubsection[{nfills\-\_\-ur}]{\setlength{\rightskip}{0pt plus 5cm}int Sistema\-::nfills\-\_\-ur\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_aebdda1654fd616f76f03691926ecfb09}
+
+
+Conté el nombre de fills nascuts en l'última ronda de reproducció del sistema, si la ha hagut. Sinó el seu valor és 0. 
+
+
+
+Definició a la línia 262 del fitxer Sistema.\-hpp.
+
+\hypertarget{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}{\index{Sistema@{Sistema}!empar@{empar}}
+\index{empar@{empar}!Sistema@{Sistema}}
+\subsubsection[{empar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lemp} Sistema\-::empar\hspace{0.3cm}{\ttfamily [private]}}}\label{class_sistema_a98845ff9b4955ce24f2378d90ca135aa}
+
+
+Llista que conté la informació dels emparellaments dels organismes existents al \hyperlink{class_sistema}{Sistema}, excepte l'últim, que pel que s'ha demostrat en la descripció de la classe no en necessitem la informació dels emparellaments perquè no es podrà emparellar de moment. Té tamany {\itshape pob -\/ 1}.\par
+ La posició i de la llista conté un enter {\itshape ini} que representa l'id decrementat en una unitat de l'organisme amb id més petit a partir del qual l'organisme amb id={\itshape i+1} pot emparellar-\/se en un moment donat. \par
+Donat un organisme d'identificador menor a {\itshape ini}, o bé no s'hi pot emparellar (perquè té id igual o menor), o bé és mort, o bé ja s'hi ha emparellat. Si l'organisme {\itshape i+1} no té cap organisme per emparellar-\/se aleshores el valor de la posició {\itshape i} coincideix amb la població actual. \par
+La posició {\itshape i} de la llista també conté un vector de booleans {\itshape e} de tamany {\itshape \mbox{[}població màxima -\/ i -\/ 1\mbox{]}} (pel que es demostra en la descripció de la classe) i la posició {\itshape j} indica si l'organisme amb {\itshape id = i + 1} s'ha emparellat amb l'organisme amb {\itshape id = i + j + 2}. 
+
+
+
+Definició a la línia 283 del fitxer Sistema.\-hpp.
+
+
+
+La documentació d'aquesta classe es va generar a partir dels següents fitxers\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sistema_8hpp}{Sistema.\-hpp}\item 
+\hyperlink{_sistema_8cpp}{Sistema.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 5 -1 0 2 -1 0 1 -1 0 
+2 : 0 1 -1 0 3 -1 0 2 -1 0 4 -1 0 
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 0
+
+ORGANISMOS
+
+FIN
+
+Organismos en total : 2
+Organismos vivos : 2
+

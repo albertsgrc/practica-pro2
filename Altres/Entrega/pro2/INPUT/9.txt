@@ -1,0 +1,27 @@
+4
+400
+1 true 2 true 3 true 0 0 4 true 5 true 0 0 6 true 0 0 7 true 8 true 0 0 0
+1 true 2 false 0 3 true 0 0 4 false 5 true 6 false 0 0 7 true 0 0 8 false 0 0 
+1 false 2 false 3 true 0 0 4 true 0 0 5 false 6 true 0 0 7 true 0 0
+1 false 0 2 false 0 3 true 4 false 5 false 0 0 6 false 0 0 7 false 8 false 0 0 9 false 0 0 
+-1 4 1 2 3 4
+-3
+-3
+-3
+-3
+-2 5 2 4 9 13 25
+-3
+-3
+-3
+-5 2 25 44
+-3
+-3
+-3
+-3
+-3
+-3
+-3
+-3
+-3
+-3
+-6

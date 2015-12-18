@@ -1,0 +1,390 @@
+\hypertarget{class_celula}{\section{Referència de la Classe Celula}
+\label{class_celula}\index{Celula@{Celula}}
+}
+
+
+Representa una cèlula d'un organisme.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_celula_a3c5017fbcec8cb564acc666aa7e21206}{Celula} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. S'executa automàticament al declarar una \hyperlink{class_celula}{Celula}. \end{DoxyCompactList}\item 
+\hyperlink{class_celula_abb139a1803c167a0cf4eb299746b7f2e}{Celula} (int identificador, bool activitat)
+\begin{DoxyCompactList}\small\item\em Creadora amb paràmetres. \end{DoxyCompactList}\item 
+\hyperlink{class_celula_ae46715be0b1a9b7531f54691148f88b8}{Celula} (const \hyperlink{class_celula}{Celula} \&c)
+\begin{DoxyCompactList}\small\item\em Constructora de còpia. Crea una cèl·lula còpia d'una altra. \end{DoxyCompactList}\item 
+\hyperlink{class_celula_aa102b024e4c8d91a2f69afa14d4e4130}{$\sim$\-Celula} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+bool \hyperlink{class_celula_a0d5c352e0b5c3187767dbcef413b51a9}{es\-\_\-buida} () const 
+\begin{DoxyCompactList}\small\item\em Consultora que indica si una cèl·lula és buida. \end{DoxyCompactList}\item 
+bool \hyperlink{class_celula_a25bbae8df2eb0b60202829321175e3f7}{es\-\_\-activa} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de la activitat/passivitat d'una cèl·lula. \end{DoxyCompactList}\item 
+int \hyperlink{class_celula_a521825572a84119f433c77e5707aadd6}{consul\-\_\-id} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de l'identificador d'una cèl·lula. \end{DoxyCompactList}\item 
+void \hyperlink{class_celula_a75b2519d8063e841dea7b9d6fd1506ab}{escriure\-\_\-celula} () const 
+\begin{DoxyCompactList}\small\item\em Operació d'escriptura d'una cèl·lula. \end{DoxyCompactList}\item 
+void \hyperlink{class_celula_a8b78a83ccbaa5be1cea1ffd47972279c}{llegir\-\_\-celula} ()
+\begin{DoxyCompactList}\small\item\em Operació de lectura d'una cèl·lula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}{id}
+\begin{DoxyCompactList}\small\item\em Conté l'identificador de la cèl·lula. \end{DoxyCompactList}\item 
+bool \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa}
+\begin{DoxyCompactList}\small\item\em Indica si la cèl·lula és activa o passiva. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats Estàtics}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_celula_a22f5121a6d3cc3cee44274b55ec842e9}{I\-D\-\_\-\-B\-U\-I\-D\-A} = 0
+\begin{DoxyCompactList}\small\item\em Identificador especial per {\bfseries cèl·lules buides.} \end{DoxyCompactList}\item 
+static const int \hyperlink{class_celula_aea4803f947d114aaea4861232f6f3a38}{P\-A\-S\-S\-I\-V\-A} = -\/1
+\begin{DoxyCompactList}\small\item\em Representació de les cèl·lules passives. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_celula_a3c06376789ddb1605295cbf3835d01bb}{A\-C\-T\-I\-V\-A} = 1
+\begin{DoxyCompactList}\small\item\em Representació de les cèl·lules actives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Representa una cèlula d'un organisme. 
+
+Es caracteritza per un natural que l'identifica i pot ser activa o passiva. Es pot llegir, escriure i es poden consultar els seus paràmetres. Les cèlules buides tenen un identificador especial, el 0, i són passives.
+
+{\bfseries Comentaris\-:}
+
+Aquesta classe té poques operacions i totes són creadores, consultores, o de lectura o escriptura. La seva utilització no era estrictament necessària però vaig considerar que seria millor tenir les seves operacions agrupades en un mòdul per tal d'organitzar millor el programa modular, ja que tampoc suposa una pèrdua notable d'eficiència, i vaig considerar l'organització un criteri prioritari. 
+
+Definició a la línia 29 del fitxer Celula.\-hpp.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\hypertarget{class_celula_a3c5017fbcec8cb564acc666aa7e21206}{\index{Celula@{Celula}!Celula@{Celula}}
+\index{Celula@{Celula}!Celula@{Celula}}
+\subsubsection[{Celula}]{\setlength{\rightskip}{0pt plus 5cm}Celula\-::\-Celula (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celula_a3c5017fbcec8cb564acc666aa7e21206}
+
+
+Creadora per defecte. S'executa automàticament al declarar una \hyperlink{class_celula}{Celula}. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és una \hyperlink{class_celula}{Celula} {\bfseries buida} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 12 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+12                \{
+13     \textcolor{keywordtype}{id} = \hyperlink{class_celula_a22f5121a6d3cc3cee44274b55ec842e9}{ID\_BUIDA};
+14     \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = \textcolor{keyword}{false}; \textcolor{comment}{// Definim que les celules buides son passives}
+15 \}
+\end{DoxyCode}
+\hypertarget{class_celula_abb139a1803c167a0cf4eb299746b7f2e}{\index{Celula@{Celula}!Celula@{Celula}}
+\index{Celula@{Celula}!Celula@{Celula}}
+\subsubsection[{Celula}]{\setlength{\rightskip}{0pt plus 5cm}Celula\-::\-Celula (
+\begin{DoxyParamCaption}
+\item[{int}]{identificador, }
+\item[{bool}]{activitat}
+\end{DoxyParamCaption}
+)}}\label{class_celula_abb139a1803c167a0cf4eb299746b7f2e}
+
+
+Creadora amb paràmetres. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em identificador} & Identificador de la cèl·lula a crear \\
+\hline
+{\em activitat} & Indicador de la activitat/passivitat de la cèl·lula a crear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és una cèlula amb identificador {\ttfamily id}. Si {\ttfamily activa} és cert, aleshores la cèl·lula resultant és {\bfseries activa}, altrament és {\bfseries passiva} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 17 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+17                                                 \{
+18     \textcolor{keywordtype}{id} = identificador;
+19     \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = activitat;
+20 \}
+\end{DoxyCode}
+\hypertarget{class_celula_ae46715be0b1a9b7531f54691148f88b8}{\index{Celula@{Celula}!Celula@{Celula}}
+\index{Celula@{Celula}!Celula@{Celula}}
+\subsubsection[{Celula}]{\setlength{\rightskip}{0pt plus 5cm}Celula\-::\-Celula (
+\begin{DoxyParamCaption}
+\item[{const {\bf Celula} \&}]{c}
+\end{DoxyParamCaption}
+)}}\label{class_celula_ae46715be0b1a9b7531f54691148f88b8}
+
+
+Constructora de còpia. Crea una cèl·lula còpia d'una altra. 
+
+
+\begin{DoxyParams}{Paràmetres}
+{\em c} & \hyperlink{class_celula}{Celula} de la qual es vol crear una còpia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és una \hyperlink{class_celula}{Celula} copia de {\ttfamily c} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 22 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+22                              \{
+23     \textcolor{keywordtype}{id} = c.\hyperlink{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}{id};
+24     \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = c.\hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa};
+25 \}
+\end{DoxyCode}
+\hypertarget{class_celula_aa102b024e4c8d91a2f69afa14d4e4130}{\index{Celula@{Celula}!$\sim$\-Celula@{$\sim$\-Celula}}
+\index{$\sim$\-Celula@{$\sim$\-Celula}!Celula@{Celula}}
+\subsubsection[{$\sim$\-Celula}]{\setlength{\rightskip}{0pt plus 5cm}Celula\-::$\sim$\-Celula (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celula_aa102b024e4c8d91a2f69afa14d4e4130}
+
+
+Destructora per defecte. 
+
+
+
+Definició a la línia 29 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+29 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\hypertarget{class_celula_a0d5c352e0b5c3187767dbcef413b51a9}{\index{Celula@{Celula}!es\-\_\-buida@{es\-\_\-buida}}
+\index{es\-\_\-buida@{es\-\_\-buida}!Celula@{Celula}}
+\subsubsection[{es\-\_\-buida}]{\setlength{\rightskip}{0pt plus 5cm}bool Celula\-::es\-\_\-buida (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_celula_a0d5c352e0b5c3187767dbcef413b51a9}
+
+
+Consultora que indica si una cèl·lula és buida. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si el paràmetre implícit és una \hyperlink{class_celula}{Celula} {\bfseries buida} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 33 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+33                             \{
+34     \textcolor{keywordflow}{return} \textcolor{keywordtype}{id} == \hyperlink{class_celula_a22f5121a6d3cc3cee44274b55ec842e9}{ID\_BUIDA};
+35 \}
+\end{DoxyCode}
+\hypertarget{class_celula_a25bbae8df2eb0b60202829321175e3f7}{\index{Celula@{Celula}!es\-\_\-activa@{es\-\_\-activa}}
+\index{es\-\_\-activa@{es\-\_\-activa}!Celula@{Celula}}
+\subsubsection[{es\-\_\-activa}]{\setlength{\rightskip}{0pt plus 5cm}bool Celula\-::es\-\_\-activa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_celula_a25bbae8df2eb0b60202829321175e3f7}
+
+
+Consultora de la activitat/passivitat d'una cèl·lula. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat indica si el paràmetre implícit és una \hyperlink{class_celula}{Celula} {\bfseries activa} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 37 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+37                              \{
+38     \textcolor{keywordflow}{return} \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa};
+39 \}
+\end{DoxyCode}
+\hypertarget{class_celula_a521825572a84119f433c77e5707aadd6}{\index{Celula@{Celula}!consul\-\_\-id@{consul\-\_\-id}}
+\index{consul\-\_\-id@{consul\-\_\-id}!Celula@{Celula}}
+\subsubsection[{consul\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}int Celula\-::consul\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_celula_a521825572a84119f433c77e5707aadd6}
+
+
+Consultora de l'identificador d'una cèl·lula. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és {\bfseries l'identificador} del paràmetre implícit 
+\end{DoxyPostcond}
+
+
+Definició a la línia 41 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+41                             \{
+42     \textcolor{keywordflow}{return} \hyperlink{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}{id};
+43 \}
+\end{DoxyCode}
+\hypertarget{class_celula_a75b2519d8063e841dea7b9d6fd1506ab}{\index{Celula@{Celula}!escriure\-\_\-celula@{escriure\-\_\-celula}}
+\index{escriure\-\_\-celula@{escriure\-\_\-celula}!Celula@{Celula}}
+\subsubsection[{escriure\-\_\-celula}]{\setlength{\rightskip}{0pt plus 5cm}void Celula\-::escriure\-\_\-celula (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_celula_a75b2519d8063e841dea7b9d6fd1506ab}
+
+
+Operació d'escriptura d'una cèl·lula. 
+
+\begin{DoxyPrecond}{Precondició}
+Cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'ha escrit pel canal estàndard de sortida l'identificador del paràmetre implícit i un {\itshape '-\/1'} si la \hyperlink{class_celula}{Celula} és {\bfseries passiva} o un {\itshape '1'} si és {\bfseries activa} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 45 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+45                                    \{
+46     \textcolor{comment}{/* Escrivim l'identificador de la cel·lula i la informacio}
+47 \textcolor{comment}{       sobre la seva activitat/passivitat */}
+48     cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '};
+49     \textcolor{keywordflow}{if} (\hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa}) cout << \hyperlink{class_celula_a3c06376789ddb1605295cbf3835d01bb}{ACTIVA} << \textcolor{charliteral}{' '};
+50     \textcolor{keywordflow}{else} cout << \hyperlink{class_celula_aea4803f947d114aaea4861232f6f3a38}{PASSIVA} << \textcolor{charliteral}{' '};
+51 \}
+\end{DoxyCode}
+\hypertarget{class_celula_a8b78a83ccbaa5be1cea1ffd47972279c}{\index{Celula@{Celula}!llegir\-\_\-celula@{llegir\-\_\-celula}}
+\index{llegir\-\_\-celula@{llegir\-\_\-celula}!Celula@{Celula}}
+\subsubsection[{llegir\-\_\-celula}]{\setlength{\rightskip}{0pt plus 5cm}void Celula\-::llegir\-\_\-celula (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celula_a8b78a83ccbaa5be1cea1ffd47972279c}
+
+
+Operació de lectura d'una cèl·lula. 
+
+\begin{DoxyPrecond}{Precondició}
+Estàn preparats al canal estàndard d'entrada un enter que representa l'identificador de la cèl·lula a llegir i, si la cèl·lula no és buida, un booleà que indica si la cèl·lula a llegir és activa o passiva 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+S'han llegit els paràmetres {\itshape id} i {\itshape activa} del parámetre implícit si la cèl·lula no és buida. En cas de ser buida només s'ha llegit el seu identificador (un 0) i la \hyperlink{class_celula}{Celula} resultant és passiva. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 55 del fitxer Celula.\-cpp.
+
+
+\begin{DoxyCode}
+55                            \{
+56     \textcolor{comment}{/* Es tracta de llegir la informacio necessaria per definir la celula,}
+57 \textcolor{comment}{       en aquest cas l'identificador i la passivitat/activitat, tenint en}
+58 \textcolor{comment}{       compte que si la celula es buida no ens cal tenir informacio sobre}
+59 \textcolor{comment}{       la seva activitat, pero com que hem definit que les celules buides}
+60 \textcolor{comment}{       siguin passives, hem d'assignar la seva passivitat */}
+61     \textcolor{keywordtype}{id} = readint();
+62     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != \hyperlink{class_celula_a22f5121a6d3cc3cee44274b55ec842e9}{ID\_BUIDA}) \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = readbool();
+63     \textcolor{keywordflow}{else} \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = \textcolor{keyword}{false};
+64 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\hypertarget{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}{\index{Celula@{Celula}!id@{id}}
+\index{id@{id}!Celula@{Celula}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Celula\-::id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}
+
+
+Conté l'identificador de la cèl·lula. 
+
+
+
+Definició a la línia 121 del fitxer Celula.\-hpp.
+
+\hypertarget{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{\index{Celula@{Celula}!activa@{activa}}
+\index{activa@{activa}!Celula@{Celula}}
+\subsubsection[{activa}]{\setlength{\rightskip}{0pt plus 5cm}bool Celula\-::activa\hspace{0.3cm}{\ttfamily [private]}}}\label{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}
+
+
+Indica si la cèl·lula és activa o passiva. 
+
+
+
+Definició a la línia 123 del fitxer Celula.\-hpp.
+
+\hypertarget{class_celula_a22f5121a6d3cc3cee44274b55ec842e9}{\index{Celula@{Celula}!I\-D\-\_\-\-B\-U\-I\-D\-A@{I\-D\-\_\-\-B\-U\-I\-D\-A}}
+\index{I\-D\-\_\-\-B\-U\-I\-D\-A@{I\-D\-\_\-\-B\-U\-I\-D\-A}!Celula@{Celula}}
+\subsubsection[{I\-D\-\_\-\-B\-U\-I\-D\-A}]{\setlength{\rightskip}{0pt plus 5cm}const int Celula\-::\-I\-D\-\_\-\-B\-U\-I\-D\-A = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_celula_a22f5121a6d3cc3cee44274b55ec842e9}
+
+
+Identificador especial per {\bfseries cèl·lules buides.} 
+
+
+
+Definició a la línia 125 del fitxer Celula.\-hpp.
+
+\hypertarget{class_celula_aea4803f947d114aaea4861232f6f3a38}{\index{Celula@{Celula}!P\-A\-S\-S\-I\-V\-A@{P\-A\-S\-S\-I\-V\-A}}
+\index{P\-A\-S\-S\-I\-V\-A@{P\-A\-S\-S\-I\-V\-A}!Celula@{Celula}}
+\subsubsection[{P\-A\-S\-S\-I\-V\-A}]{\setlength{\rightskip}{0pt plus 5cm}const int Celula\-::\-P\-A\-S\-S\-I\-V\-A = -\/1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_celula_aea4803f947d114aaea4861232f6f3a38}
+
+
+Representació de les cèl·lules passives. 
+
+
+
+Definició a la línia 127 del fitxer Celula.\-hpp.
+
+\hypertarget{class_celula_a3c06376789ddb1605295cbf3835d01bb}{\index{Celula@{Celula}!A\-C\-T\-I\-V\-A@{A\-C\-T\-I\-V\-A}}
+\index{A\-C\-T\-I\-V\-A@{A\-C\-T\-I\-V\-A}!Celula@{Celula}}
+\subsubsection[{A\-C\-T\-I\-V\-A}]{\setlength{\rightskip}{0pt plus 5cm}const int Celula\-::\-A\-C\-T\-I\-V\-A = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_celula_a3c06376789ddb1605295cbf3835d01bb}
+
+
+Representació de les cèl·lules actives. 
+
+
+
+Definició a la línia 129 del fitxer Celula.\-hpp.
+
+
+
+La documentació d'aquesta classe es va generar a partir dels següents fitxers\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_celula_8hpp}{Celula.\-hpp}\item 
+\hyperlink{_celula_8cpp}{Celula.\-cpp}\end{DoxyCompactItemize}

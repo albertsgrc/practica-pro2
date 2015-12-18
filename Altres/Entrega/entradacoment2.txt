@@ -1,0 +1,104 @@
+4
+20
+
+//Organisme 1
+1 false 2 false 0 3 false 4 false 5 false 25 false 0 0 0 7 false 0 0 8 false 0 9 false 10 false 11 false 0 0 0 0 12 false 13 false 14 false 15 false 0 0 16 false 17 false 18 false 0 0 19 false 0 0 0 20 false 0 0 0
+
+//Organisme 2
+5 true 70 true 0 10 true 11 true 0 0 23 true 0 25 true 16 true 0 0 17 true 0 32 true 65 true 0 0 47 true 52 true 0 0 0 2 true 21 true 12 true 55 true 66 true 33 true 41 true 0 99 true 0 0 0 92 true 0 0 0 6 true 0 0 95 true 0 0 0
+
+//Organisme 3
+2 false 7 true 8 false 10 false 17 true 0 0 0 0 0 18 false 0 9 false 20 true 0 0 0
+
+//Organisme 4
+1 false 2 true 4 false 0 0 5 false 0 0 3 true 6 true 0 0 7 false 0 0 
+
+// Escrivim els organismes per comprovar que s'han llegit bé mes algún de buit per comprovar que no els inicialitza
+-5 6 1 2 3 4 10 11
+
+// Fem una ronda de reproduccions
+-3 
+
+//Comprovem que genera be els fills
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+// Ranking
+-4 //Comprovem que actualitza els elements del ranking, n'afegeix els nous i els ordena adequadament
+
+// Fem una segona ronda de reproduccions
+-3 
+
+//Ranking
+-4 //Comprovem que no ha modificat el ranking
+
+//Compovem que no ha generat cap fill en aquesta ultima ronda
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+// Retallem els llargs per limitar el seu creixement i algun element inexistent per comprovar que no fa res
+-2 10 1 2 5 15 18 10 9 8 19 17
+
+//Comprovem que retalla correctament
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+// Estirem els curts , algun element retallat i algun inexistent per comprovar que no fa res
+-1 12 1 2 3 4 6 11 18 15 14 13 12 11
+
+//Comprovem que estira correctament els elements que no han sigut retallats abansi que aquests no els estira
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+//Ronda de reproduccions
+-3
+   
+
+-4 //comprovem ultima ronda de reproduccions
+
+// Retallem 
+-2 1 4
+
+-5 1 4
+
+//4a ronda de reproduccions
+-3 
+
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+-4
+
+//Intentem estirar un organisme retallat anteriorment
+-1 1 5
+
+//Comprovem que no estira l'organisme
+-5 1 5
+
+//5a ronda de reproduccions
+-3
+
+-4 //imprimim el ranking per veure que l'ordena correctament
+
+//Retallem l'organisme 10 
+-2 2 10 4 
+-5 2 10 4
+
+-2 3 4 4 4 //Matem l'organisme 4
+
+//Comprovem la seva mort
+-5 1 4
+
+//6a ronda de reproduccions
+-3 //2 fills generats 
+ 
+-4
+
+-1 2 7 8
+
+-2 5 10 11 12 13 14
+
+-3
+
+-4
+
+//Comprovem els organismes existents abans d'acabar la ronda
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+//7a ronda de reproduccions, forçem l'acabament del programa 
+-3 

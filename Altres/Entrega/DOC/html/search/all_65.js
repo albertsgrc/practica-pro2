@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['e',['e',['../struct_sistema_1_1_info_emparellaments.html#ab4101cb4002cf6378372e3a94ffb4bfc',1,'Sistema::InfoEmparellaments']]],
+  ['empar',['empar',['../struct_ranking_1_1_dades.html#a175e0290476b144b7fa7f96d3c63a13e',1,'Ranking::Dades::empar()'],['../class_sistema.html#a98845ff9b4955ce24f2378d90ca135aa',1,'Sistema::empar()']]],
+  ['emparellar_5forganismes',['emparellar_organismes',['../class_sistema.html#a13f288276b20ffc386edd42964b60277',1,'Sistema']]],
+  ['es_5factiva',['es_activa',['../class_celula.html#a25bbae8df2eb0b60202829321175e3f7',1,'Celula']]],
+  ['es_5fbuida',['es_buida',['../class_celula.html#a0d5c352e0b5c3187767dbcef413b51a9',1,'Celula']]],
+  ['es_5festirable_5forg',['es_estirable_org',['../class_sistema.html#a3ab5d199d6f7af87c3b00f51702da9dc',1,'Sistema']]],
+  ['es_5fmort',['es_mort',['../class_organisme.html#abe3c4923cc5641e48724312bc298c8a9',1,'Organisme']]],
+  ['es_5fviu_5forg',['es_viu_org',['../class_sistema.html#a3eba48be6e01d213f87d9c12c22530fe',1,'Sistema']]],
+  ['escriure_5facel',['escriure_acel',['../class_organisme.html#a18593921b9bf3ca9730ea8125c550b3c',1,'Organisme']]],
+  ['escriure_5fcelula',['escriure_celula',['../class_celula.html#a75b2519d8063e841dea7b9d6fd1506ab',1,'Celula']]],
+  ['escriure_5fllista_5forg',['escriure_llista_org',['../class_ranking.html#a6b0ff3c2276a8f6e3a24f8394329ccab',1,'Ranking']]],
+  ['escriure_5forg',['escriure_org',['../class_sistema.html#ad3028a34f72a19d63a2d126bb4422b5b',1,'Sistema']]],
+  ['escriure_5forganisme',['escriure_organisme',['../class_organisme.html#a5ab6abd54070a56ceee9774b63ad041e',1,'Organisme']]],
+  ['escriure_5franking',['escriure_ranking',['../class_ranking.html#aba7a9802d6d3881a19d6fb136b705e07',1,'Ranking']]],
+  ['esta_5fple',['esta_ple',['../class_sistema.html#adbaf521a9576706bf2212f7ce24d2d0e',1,'Sistema']]],
+  ['esta_5fretallat',['esta_retallat',['../class_organisme.html#ae580c3261f7dd221e1c5a6bd887a22f2',1,'Organisme']]],
+  ['estirament',['ESTIRAMENT',['../pro2_8cpp.html#ab53e564e575059ed07f054f950af7c03',1,'pro2.cpp']]],
+  ['estirar_5facel',['estirar_acel',['../class_organisme.html#a368d38216a2768978f4b8c2123b84aa1',1,'Organisme']]],
+  ['estirar_5forg',['estirar_org',['../class_sistema.html#abe6ae69cefc9adb10b7650635b1f7336',1,'Sistema']]],
+  ['existeix_5forg',['existeix_org',['../class_sistema.html#aa56f1fe7fee226ff6624363695ace488',1,'Sistema']]]
+];

@@ -1,0 +1,86 @@
+4
+20
+
+// Org: 1
+1 false 2 false 3 false 4 false 5 false 25 false 0 0 0 7 false 0 0 8 false 0 9 false 10 false 11 false 0 0 0 0 12 false 13 false 14 false 15 false 0 0 16 false 17 false 18 false 0 0 19 false 0 0 0 20 false 0 0 0
+// Org: 2
+5 true 70 true 0 10 true 11 true 0 0 23 true 0 25 true 16 true 0 0 17 true 0 32 true 65 true 0 0 47 true 52 true 0 0 0 2 true 21 true 12 true 55 true 66 true 33 true 41 true 0 99 true 0 0 0 92 true 0 0 0 6 true 0 0 95 true 0 0 0
+// Org: 3
+2 false 7 true 8 false 10 false 17 true 0 0 0 0 0 18 false 0 9 false 20 true 0 0 0
+// Org: 4
+1 false 2 true 4 false 0 0 5 false 0 0 3 true 6 true 0 0 7 false 0 0
+
+// Escrivim els organismes per comprovar que s'han llegit bé
+-5 6 1 2 3 4 10 11
+
+
+// Fem una ronda de reproduccions
+-3 // Ens serveix per comprovar que es facin bé les reproduccions amb organismes grans
+   // i complexos
+   // La parella 1-2 genera l'organisme 5 (són compatibles) i la parella 3-4 genera l'organisme 6 (també són compatibles)
+
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 // Imprimim tots els organismes per comprovar que els fills s'hagin fet bé
+
+-4 // Imprimim el rànking per comprovar que s'estàn fent bé els emparellaments i s'està ordenant correctament
+
+// Fem una segona ronda
+-3 // Es reprodueixen el 1-3 i no són compatibles, també es reprodueixen el 2-4 i no són compatibles 
+// (puro vicio) i el 5-6 que tampoc són compatibles,per tant en aquetsa rond ano es genera cap fill
+
+-4
+
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+// Retallem els llargs per limitar el seu creixement
+-2 9 1 2 5 15 18 10 9 8 19 17
+
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+// Estirem els curts
+-1 10 3 4 6 11 18 15 14 13 12 11
+
+// Albert
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+-3
+
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+-4
+
+// Retallem 
+-2 1 4
+
+-5 1 4
+
+-3
+
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+-4
+
+-1 1 5
+
+-5 1 5
+
+-3
+
+-2 2 10 4
+
+-3
+
+// Eduard
+ 
+-1 2 7 8
+-2 5 10 11 12 13 14
+
+-3
+-4
+-3
+-4
+-5 20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+-3
+
+   
+ 
+

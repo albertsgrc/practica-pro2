@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Pràctica de PRO2: Reproducció al Laboratori: Fitxer de Codi Ranking.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pràctica de PRO2: Reproducció al Laboratori
+   &#160;<span id="projectnumber">versió 18-maig-2014</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicions de Tipus</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Ranking.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_ranking_8cpp.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_ranking_8hpp.html">Ranking.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/****** OPERACIONS PRIVADES ******/</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_ranking.html#a6b0ff3c2276a8f6e3a24f8394329ccab">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ranking.html#a6b0ff3c2276a8f6e3a24f8394329ccab">Ranking::escriure_llista_org</a>(<span class="keyword">const</span> <a class="code" href="class_ranking.html#a6cdd02db4b2c2187ae5d7294330b9189">Lrep</a>&amp;l) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">/* Escrivim la llista de parelles/fills d&#39;un organisme donat, que</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">      sabem que s&#39;escriura per l&#39;ordre que demana l&#39;enunciat ja que</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">       els fills es van afegint a les llistes a mesura que es van creant,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">       i prenen identificadors de petit a gran */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">for</span> (Lrep::const_iterator it = l.begin(); it != l.end(); ++it) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; (*it).parella + 1 &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; (*it).fill + 1;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_ranking.html#a66bcf7bd941f2b07e7197943fcc5fcb7">   20</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_ranking.html#a66bcf7bd941f2b07e7197943fcc5fcb7">Ranking::comp</a>(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Mirem el nombre de fills que han creat els organismes</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> s1 = <a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[id1].empar.size();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> s2 = <a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[id2].empar.size();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (s1 == s2) <span class="keywordflow">return</span> id1 &gt; id2;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> s1 &lt; s2;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_ranking.html#ae630f4cd186f1fdc8ac596e41c5114af">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ranking.html#ae630f4cd186f1fdc8ac596e41c5114af">Ranking::insertar_org</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, Lint::iterator it) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Movem l&#39;iterador fins la posicio d&#39;insercio</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">while</span> (it != <a class="code" href="class_ranking.html#af527b6037110e19fda60fb4e100b7750">ordre</a>.end() and <a class="code" href="class_ranking.html#a66bcf7bd941f2b07e7197943fcc5fcb7">comp</a>(*it, <span class="keywordtype">id</span>)) ++it;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Insertem i guardem l&#39;iterador de la posicio on hem insertat</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[id].itr = <a class="code" href="class_ranking.html#af527b6037110e19fda60fb4e100b7750">ordre</a>.insert(it, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_ranking.html#ae50ccf2d119cbea1516d364eec410e2c">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ranking.html#ae50ccf2d119cbea1516d364eec410e2c">Ranking::actualitzar_org</a>(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2, <span class="keywordtype">int</span> fill) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="struct_ranking_1_1_reproduccio.html">Reproduccio</a> r;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    r.<a class="code" href="struct_ranking_1_1_reproduccio.html#a51472066a4bc2b9bb765b5cfa501ecba">parella</a> = id2;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    r.<a class="code" href="struct_ranking_1_1_reproduccio.html#ada535ed71719e8eefc693b2f1e1b495e">fill</a> = fill;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// L&#39;insertem a la corresponent llista de parelles/fills de l&#39;organisme</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[id1].empar.insert(<a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[id1].empar.end(), r);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/* Si el tamany de la seva llista de emparellaments es 1</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">       (es la seva primera reproduccio) comencem a insertar-lo</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">       des del begin de la llista (sabem que sera una insercio rapida ja que</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">       la llista esta ordenada de menys a mes fills creats) */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[id1].empar.size() == 1) <a class="code" href="class_ranking.html#ae630f4cd186f1fdc8ac596e41c5114af">insertar_org</a>(id1, <a class="code" href="class_ranking.html#af527b6037110e19fda60fb4e100b7750">ordre</a>.begin());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">/* Sino vol dir que ja existeix, per tant el borrem d&#39;on estigui</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">       i comencem a insertar desde la posicio on l&#39;hem borrat per tal</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">       que la insercio sigui mes eficient */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">else</span> <a class="code" href="class_ranking.html#ae630f4cd186f1fdc8ac596e41c5114af">insertar_org</a>(id1, <a class="code" href="class_ranking.html#af527b6037110e19fda60fb4e100b7750">ordre</a>.erase(<a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[id1].itr));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/****** OPERACIONS PUBLIQUES ******/</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// Constructores</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_ranking.html#a904a2cceb9f1662e3fe1510f3121d95f">   56</a></span>&#160;<a class="code" href="class_ranking.html#a904a2cceb9f1662e3fe1510f3121d95f">Ranking::Ranking</a>(<span class="keywordtype">int</span> pobmax) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a> = vector&lt;Dades&gt;(pobmax);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// Destructores</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_ranking.html#aa350c65acea82ec0ac42ec80db8bc00f">   62</a></span>&#160;<a class="code" href="class_ranking.html#aa350c65acea82ec0ac42ec80db8bc00f">Ranking::~Ranking</a>() {}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">// Consultores</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_ranking.html#aba7a9802d6d3881a19d6fb136b705e07">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ranking.html#aba7a9802d6d3881a19d6fb136b705e07">Ranking::escriure_ranking</a>(<span class="keywordtype">int</span> pob)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/* Es tracta d&#39;escriure primer els organismes que s&#39;han reproduit</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">       en l&#39;ordre indicat a l&#39;enunciat (en aquest cas començant per l&#39;end()</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">       i acabant al begin() ja que la llista esta ordenada del reves</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">       i despres els organismes que no s&#39;han reproduit encara, de menor a major</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">       identificador */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Lint::const_iterator it = <a class="code" href="class_ranking.html#af527b6037110e19fda60fb4e100b7750">ordre</a>.end();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">while</span> (it != <a class="code" href="class_ranking.html#af527b6037110e19fda60fb4e100b7750">ordre</a>.begin()) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        --it;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        cout &lt;&lt; *it + 1 &lt;&lt; <span class="stringliteral">&quot; :&quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_ranking.html#a6b0ff3c2276a8f6e3a24f8394329ccab">escriure_llista_org</a>(<a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[*it].empar);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; pob; ++j) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">/* El tamany de la seva llista d&#39;emparellaments ens indica si</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">           s&#39;ha reproduit */</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">org</a>[j].empar.size() == 0) cout &lt;&lt; j + 1 &lt;&lt; <span class="stringliteral">&quot; :&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">// Modificadores</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_ranking.html#a10b14da6a47f06eccff565a2d490b5fe">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_ranking.html#a10b14da6a47f06eccff565a2d490b5fe">Ranking::afegir_parella</a>(<span class="keywordtype">int</span> id1, <span class="keywordtype">int</span> id2, <span class="keywordtype">int</span> fill) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">/* Es tracta d&#39;actualitzar el ranking i les llistes d&#39;emparellaments</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">       dels dos organismes implicats en la reproduccio */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="class_ranking.html#ae50ccf2d119cbea1516d364eec410e2c">actualitzar_org</a>(id1, id2, fill);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="class_ranking.html#ae50ccf2d119cbea1516d364eec410e2c">actualitzar_org</a>(id2, id1, fill);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="class_ranking_html_a904a2cceb9f1662e3fe1510f3121d95f"><div class="ttname"><a href="class_ranking.html#a904a2cceb9f1662e3fe1510f3121d95f">Ranking::Ranking</a></div><div class="ttdeci">Ranking(int pobmax)</div><div class="ttdoc">Creadora de Ranking. </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00056">Ranking.cpp:56</a></div></div>
+<div class="ttc" id="class_ranking_html_a6cdd02db4b2c2187ae5d7294330b9189"><div class="ttname"><a href="class_ranking.html#a6cdd02db4b2c2187ae5d7294330b9189">Ranking::Lrep</a></div><div class="ttdeci">list&lt; Reproduccio &gt; Lrep</div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8hpp_source.html#l00094">Ranking.hpp:94</a></div></div>
+<div class="ttc" id="class_ranking_html_a6b0ff3c2276a8f6e3a24f8394329ccab"><div class="ttname"><a href="class_ranking.html#a6b0ff3c2276a8f6e3a24f8394329ccab">Ranking::escriure_llista_org</a></div><div class="ttdeci">static void escriure_llista_org(const Lrep &amp;l)</div><div class="ttdoc">Acció que escriu la llista d&amp;#39;emparellaments d&amp;#39;un organisme (parelles i fills). </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00009">Ranking.cpp:9</a></div></div>
+<div class="ttc" id="class_ranking_html_a66bcf7bd941f2b07e7197943fcc5fcb7"><div class="ttname"><a href="class_ranking.html#a66bcf7bd941f2b07e7197943fcc5fcb7">Ranking::comp</a></div><div class="ttdeci">bool comp(int id1, int id2)</div><div class="ttdoc">Funció de comparació per l&amp;#39;ordre del rànking. </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00020">Ranking.cpp:20</a></div></div>
+<div class="ttc" id="class_ranking_html_ae630f4cd186f1fdc8ac596e41c5114af"><div class="ttname"><a href="class_ranking.html#ae630f4cd186f1fdc8ac596e41c5114af">Ranking::insertar_org</a></div><div class="ttdeci">void insertar_org(int id, Lint::iterator it)</div><div class="ttdoc">Acció que inserta un organisme a la posició que li toca en l&amp;#39;ordre del rànking. </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00028">Ranking.cpp:28</a></div></div>
+<div class="ttc" id="class_ranking_html_af527b6037110e19fda60fb4e100b7750"><div class="ttname"><a href="class_ranking.html#af527b6037110e19fda60fb4e100b7750">Ranking::ordre</a></div><div class="ttdeci">Lint ordre</div><div class="ttdoc">Llista d&amp;#39;enters que conté els identificadors dels organismes que s&amp;#39;han reproduït, ordenada creixentme...</div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8hpp_source.html#l00121">Ranking.hpp:121</a></div></div>
+<div class="ttc" id="struct_ranking_1_1_reproduccio_html_a51472066a4bc2b9bb765b5cfa501ecba"><div class="ttname"><a href="struct_ranking_1_1_reproduccio.html#a51472066a4bc2b9bb765b5cfa501ecba">Ranking::Reproduccio::parella</a></div><div class="ttdeci">int parella</div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8hpp_source.html#l00090">Ranking.hpp:90</a></div></div>
+<div class="ttc" id="class_ranking_html_aba7a9802d6d3881a19d6fb136b705e07"><div class="ttname"><a href="class_ranking.html#aba7a9802d6d3881a19d6fb136b705e07">Ranking::escriure_ranking</a></div><div class="ttdeci">void escriure_ranking(int pob) const </div><div class="ttdoc">Operació d&amp;#39;escriptura del rànking. </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00066">Ranking.cpp:66</a></div></div>
+<div class="ttc" id="struct_ranking_1_1_reproduccio_html_ada535ed71719e8eefc693b2f1e1b495e"><div class="ttname"><a href="struct_ranking_1_1_reproduccio.html#ada535ed71719e8eefc693b2f1e1b495e">Ranking::Reproduccio::fill</a></div><div class="ttdeci">int fill</div><div class="ttdoc">Identificador d&amp;#39;una parella. </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8hpp_source.html#l00091">Ranking.hpp:91</a></div></div>
+<div class="ttc" id="_ranking_8hpp_html"><div class="ttname"><a href="_ranking_8hpp.html">Ranking.hpp</a></div><div class="ttdoc">Especificació de la classe Ranking de la Pràctica de PRO2 Reproducció al Laboratori. </div></div>
+<div class="ttc" id="class_ranking_html_a10b14da6a47f06eccff565a2d490b5fe"><div class="ttname"><a href="class_ranking.html#a10b14da6a47f06eccff565a2d490b5fe">Ranking::afegir_parella</a></div><div class="ttdeci">void afegir_parella(int id1, int id2, int fill)</div><div class="ttdoc">Acció que afegeix una parella i un fill al rànking. </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00088">Ranking.cpp:88</a></div></div>
+<div class="ttc" id="class_ranking_html_aa350c65acea82ec0ac42ec80db8bc00f"><div class="ttname"><a href="class_ranking.html#aa350c65acea82ec0ac42ec80db8bc00f">Ranking::~Ranking</a></div><div class="ttdeci">~Ranking()</div><div class="ttdoc">Destructora per defecte. </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00062">Ranking.cpp:62</a></div></div>
+<div class="ttc" id="class_ranking_html_ae50ccf2d119cbea1516d364eec410e2c"><div class="ttname"><a href="class_ranking.html#ae50ccf2d119cbea1516d364eec410e2c">Ranking::actualitzar_org</a></div><div class="ttdeci">void actualitzar_org(int id1, int id2, int fill)</div><div class="ttdoc">Acció que actualitza l&amp;#39;ordre del rànking i afegeix una reproducció (parella i fill) a un organisme...</div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8cpp_source.html#l00035">Ranking.cpp:35</a></div></div>
+<div class="ttc" id="class_ranking_html_a89de97e7542e8989c241113a4ee2498f"><div class="ttname"><a href="class_ranking.html#a89de97e7542e8989c241113a4ee2498f">Ranking::org</a></div><div class="ttdeci">vector&lt; Dades &gt; org</div><div class="ttdoc">Vector de tamany la població màxima del rànking en el que la posició i conté la llista d&amp;#39;emparellamen...</div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8hpp_source.html#l00127">Ranking.hpp:127</a></div></div>
+<div class="ttc" id="struct_ranking_1_1_reproduccio_html"><div class="ttname"><a href="struct_ranking_1_1_reproduccio.html">Ranking::Reproduccio</a></div><div class="ttdoc">Estructura de dades que conté la informació d&amp;#39;una reproducció </div><div class="ttdef"><b>Definition:</b> <a href="_ranking_8hpp_source.html#l00089">Ranking.hpp:89</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>
