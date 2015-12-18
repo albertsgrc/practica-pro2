@@ -1,4 +1,3 @@
 # Pràctica PRO2
 
-Pràctica de l'assignatura Programació 2 (PRO2) del Grau en Enginyeria Informàtica de la Facultat d'Informàtica de Barcelona, Q2 2013-2014
-
+Project for the Programming 2 Course (PRO2) of the Degree in Computer Science from the Barcelona School of Informatics (FIB UPC)
